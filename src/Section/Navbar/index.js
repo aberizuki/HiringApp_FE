@@ -5,7 +5,7 @@ import React from "react";
 
 function Navbar() {
     return(
-        <div className="w-full flex justify-center h-[100px]">
+        <div className="hidden md:w-full md:flex md:justify-center md:h-[100px]">
             <div className="flex justify-cente w-full container">
                 <div className="flex justify-between items-center w-full">
                     <div>
