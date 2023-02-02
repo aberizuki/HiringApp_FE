@@ -2,17 +2,17 @@ import React from "react";
 import Navbar from "src/Section/Navbar";
 import Footer from "src/Section/Footer";
 import Header from "src/components/Header";
-import HireSection from "src/Section/HireSection";
+import PortofolioSection from "src/Section/PortofolioSection";
 
-function Hire() {
+function ProfilePortofolio() {
   return (
     <div>
       <Navbar />
       <Header />
-      <HireSection />
+      <PortofolioSection />
       <Footer />
     </div>
   );
 }
 
-export default Hire;
+export default ProfilePortofolio;

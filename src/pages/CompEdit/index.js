@@ -2,17 +2,17 @@ import React from "react";
 import Navbar from "src/Section/Navbar";
 import Footer from "src/Section/Footer";
 import Header from "src/components/Header";
-import HireSection from "src/Section/HireSection";
+import EditCompanySection from "src/Section/EditCompanySection";
 
-function Hire() {
+function CompEdit() {
   return (
     <div>
       <Navbar />
       <Header />
-      <HireSection />
+      <EditCompanySection />
       <Footer />
     </div>
   );
 }
 
-export default Hire;
+export default CompEdit;

@@ -2,17 +2,17 @@ import React from "react";
 import Navbar from "src/Section/Navbar";
 import Footer from "src/Section/Footer";
 import Header from "src/components/Header";
-import HireSection from "src/Section/HireSection";
+import EditProfileSection from "src/Section/EditProfileSection";
 
-function Hire() {
+function UserEdit() {
   return (
     <div>
       <Navbar />
       <Header />
-      <HireSection />
+      <EditProfileSection />
       <Footer />
     </div>
   );
 }
 
-export default Hire;
+export default UserEdit;
