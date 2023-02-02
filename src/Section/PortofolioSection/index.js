@@ -1,6 +1,6 @@
 import React from "react";
-import CardDetailPortofolio from "src/components/Card-DetailPortofolio";
-import CardInfoDetail from "src/components/Card-DetailProfile";
+import CardDetailPortofolio from "src/components/CardDetailPortofolio";
+import CardInfoDetail from "src/components/CardDetailProfile";
 
 function PortofolioSection() {
     return (
