@@ -2,7 +2,7 @@ import React from "react";
 
 function CardFilter() {
     return (
-        <div className="hidden tablet:flex tablet:justify-center tablet:my-10 ">
+        <div className="hidden md:flex md:justify-center md:my-10 ">
             <form className="bg-white p-2 flex text-sm justify-between w-full rounded-lg ">
                 <input 
                 className="w-[60%]"

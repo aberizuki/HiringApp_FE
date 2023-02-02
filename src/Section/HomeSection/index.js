@@ -1,7 +1,7 @@
-import CardInfoMobile from "src/components/Card-Info-mobile";
+import CardInfoMobile from "src/components/CardInfomobile";
 import React from "react";
-import CardFilter from "src/components/Card-Filter";
-import CardInfo from "src/components/Card-Info";
+import CardFilter from "src/components/CardFilter";
+import CardInfo from "src/components/CardInfo";
 
 function HomeSection() {
     return (

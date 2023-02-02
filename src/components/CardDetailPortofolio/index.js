@@ -16,7 +16,7 @@ function CardDetailPortofolio() {
             <div className="w-full flex py-10 border-b-[2px]">
                 <div className="w-[25%] flex justify-center">
                     <img
-                        className="w-10 h-10 tablet:w-16 tablet:h-16"
+                        className="w-10 h-10 md:w-16 md:h-16"
                         src={require("src/assets/tokopedia.png")}
                         alt="smhfbdhf"/>
                 </div>
@@ -37,7 +37,7 @@ function CardDetailPortofolio() {
             <div className="w-full bg-white rounded-lg px-5 py-5 mb-10 ">
                 <div className="card-profil flex-col justify-center items-center py-10">
                     <div className="flex flex-col ">
-                        <div className="flex w-full tablet:w-[50%] text-base tablet:text-xl">
+                        <div className="flex w-full md:w-[50%] text-base md:text-xl">
                             <p onClick={() => setShow(true)} className={show ? "w-1/2 border-b-[4px] pb-5 border-[#5E50A1] mr-3" : "w-1/2 text-[#9EA0A5] mr-3"  }>Portofolio</p>
                             <p onClick={() => setShow(false)} className={!show ? "w-1/2 border-b-[4px] pb-5 border-[#5E50A1]" : "w-1/2 text-[#9EA0A5]"  }>Pengalaman kerja</p>
                         </div>
@@ -46,7 +46,7 @@ function CardDetailPortofolio() {
                                 show
                                     ? data.map(() => (
                                         <div
-                                            className="tablet:w-[47%] my-5 tablet:mx-[1%] xl:mx-[1%] xl:w-[23%] tablet:flex tablet:flex-col tablet:items-center">
+                                            className= "md:w-[47%] my-5 md:mx-[1%] xl:mx-[1%] xl:w-[23%] md:flex md:flex-col md:items-center">
                                             <img
                                                 className="w-full  my-5 "
                                                 src={require("src/assets/Rectangle 637.webp")}

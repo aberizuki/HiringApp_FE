@@ -5,7 +5,7 @@ function CardInfoMobile() {
     const data = [2, 3, 3, 5, 6, 6,6]
 
     return (
-        <div className="flex tablet:hidden flex-col">
+        <div className="flex md:hidden flex-col">
             {
                 data.map(() => (
                     <div className="w-full bg-white rounded-lg px-4 mt-2">

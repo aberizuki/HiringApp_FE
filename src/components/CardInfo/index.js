@@ -7,7 +7,7 @@ function CardInfo() {
     const data = [2, 3, 3,5]
 
     return (
-        <div className="hidden tablet:flex">
+        <div className="hidden md:flex">
             <div className="w-full bg-white rounded-lg px-5 mb-10 ">
                 {data.map(()=>(
                     <div className="card-profil flex justify-between items-center py-10">

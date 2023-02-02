@@ -1,13 +1,13 @@
 import React from "react";
-import FooterMobile from "src/components/Footer-Mobile";
+import FooterMobile from "src/components/FooterMobile";
 
 function Footer() {
     return (
         <div>
-            <div className="tablet:hidden sflex">
+            <div className="md:hidden sflex">
                 <FooterMobile/>
             </div>
-            <div className="hidden tablet:flex">
+            <div className="hidden md:flex">
                 <section className="flex justify-center w-full bg-[#5E50A1]">
                     <div className="container text-lg text-white">
                         <div className="flex flex-col pt-[70px] pb-10">

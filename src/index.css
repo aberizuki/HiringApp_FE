@@ -30,6 +30,11 @@ body{
     border-radius: 4px;
     border: 2px solid #FBB017;
 }
+.btn-submit {
+    background-color: #FBB017;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
 
 @media only screen and (max-width: 768px) {
     .container {
