@@ -1,6 +1,6 @@
 import FormExperience from "src/components/FormExperience";
 import React from "react";
-import CardUserEdit from "@/components/CardEditUser";
+import CardUserEdit from "src/components/CardEditUser";
 import FormUserEdit from "src/components/FormEditProfile";
 import FormUserSkill from "src/components/FormSkill";
 import FormPortofolio from "src/components/FormPortofolio";
