@@ -22,7 +22,8 @@ function CardInfoDetail() {
                                     <p className="text-black mb-2">Web developer - Freelance</p>
                                     <div className="text-base font-normal">
                                         <p className="text-[#9EA0A5] mb-3">Bandung</p>
-                                        <p className="text-[#9EA0A5] mb-4">Talent</p>
+                                        <p className="text-[#9EA0A5] mb-3">Talent</p>
+                                        <p className="text-[#9EA0A5] mb-3">Talent</p>
                                         <p className="text-[#9EA0A5] mb-10">Lorem ipsum dolor sit amet, consectetur
                                             adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna.
                                             Curabitur eu lacus fringilla, vestibulum risus at.</p>
@@ -32,7 +33,7 @@ function CardInfoDetail() {
                                             Lihat Profile
                                         </button>
                                     </div>
-                                    <div>
+                                    <div className="skill">
                                         <p className="tesxt-2xl fon-semibold text-black mb-5">Skill</p>
                                         <button className="btn-secondary px-6 py-1 mr-3 my-3">PHP</button>
                                         <button className="btn-secondary px-6 py-1 mr-3 my-3">JavaScript</button>
