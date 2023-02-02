@@ -12,6 +12,7 @@ function Hire() {
             <Navbar/>
             <Header/>
             <HireSection/>
+        1
             <Footer/>
         </div>
     )
