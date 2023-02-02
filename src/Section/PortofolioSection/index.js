@@ -8,7 +8,8 @@ function PortofolioSection() {
             <div className="container">
                 <div className="mt-10 mb-5 text-xl font-semibold w-full tablet:flex tablet:justify-between">
                     <div className="tablet:w-[29%]">
-                        <CardInfoDetail/>
+                        <CardInfoDetail name="ahdi permana"
+                        />
                     </div>
                     <div className="tablet:w-[69%]">
                         <CardDetailPortofolio/>

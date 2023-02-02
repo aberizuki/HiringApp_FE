@@ -1,7 +1,7 @@
 import React from "react";
 
-function CardInfoDetail() {
-
+function CardInfoDetail(props) {
+    const {name} = props
     const data = [2]
 
     return (
@@ -18,7 +18,7 @@ function CardInfoDetail() {
                                         alt="smhfbdhf"/>
                                 </div>
                                 <div className="mb-16">
-                                    <p className="text-3xl text-black font-semibold my-5">Louis Tomlinson</p>
+                                    <p className="text-3xl text-black font-semibold my-5">{name}</p>
                                     <p className="text-black mb-2">Web developer - Freelance</p>
                                     <div className="text-base font-normal">
                                         <p className="text-[#9EA0A5] mb-3">Bandung</p>
