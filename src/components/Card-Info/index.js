@@ -1,11 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function CardInfo() {
 
+    const navigate = useNavigate()
     const data = [2, 3, 3,5]
 
     return (
-        <div className="hidden md:flex">
+        <div className="hidden tablet:flex">
             <div className="w-full bg-white rounded-lg px-5 mb-10 ">
                 {data.map(()=>(
                     <div className="card-profil flex justify-between items-center py-10">
@@ -28,7 +30,9 @@ function CardInfo() {
                         </div>
                     </div>
                     <div >
-                        <button className="btn-primary py-4 px-8 mr-12">
+                        <button 
+                        onClick={()=> navigate("profile-portofolio")}
+                        className="btn-primary py-4 px-8 mr-12">
                             Lihat Profile
                         </button>
                     </div>

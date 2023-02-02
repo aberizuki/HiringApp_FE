@@ -4,10 +4,10 @@ import FooterMobile from "src/components/Footer-Mobile";
 function Footer() {
     return (
         <div>
-            <div className="md:hidden sflex">
+            <div className="tablet:hidden sflex">
                 <FooterMobile/>
             </div>
-            <div className="hidden md:flex">
+            <div className="hidden tablet:flex">
                 <section className="flex justify-center w-full bg-[#5E50A1]">
                     <div className="container text-lg text-white">
                         <div className="flex flex-col pt-[70px] pb-10">
