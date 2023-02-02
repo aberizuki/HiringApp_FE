@@ -1,22 +1,23 @@
 import React from "react";
+import Footer from "src/Section/Footer";
 
 function Landing() {
   return (
     <main>
-      <navbar>
+      <section>
         <div className="w-full flex justify-center h-[100px]">
           <div className="flex justify-center w-full container">
             <div className="flex justify-between items-center w-full">
               <div>
                 <img
                   className="ml-5"
-                  src={require("../../assets/img/logo.png")}
+                  src={require("src/assets/img/logo.png")}
                   alt="logo-peworld"
                 />
               </div>
               <div className="flex m-5">
                 <div>
-                  <button class="bg-transparent hover:bg-blue-500 text-[#5E50A1] font-semibold hover:text-white py-2 px-4 border border-[#5E50A1] hover:border-transparent rounded mr-5">
+                  <button class="bg-transparent text-[#5E50A1] font-semibold hover:text-white py-2 px-4 border border-[#5E50A1] hover:border-transparent rounded mr-5">
                     Log in
                   </button>
                 </div>
@@ -30,7 +31,7 @@ function Landing() {
             </div>
           </div>
         </div>
-      </navbar>
+      </section>
       <section className="mb-5">
         <div className="lg:flex justify-center">
           <div className="m-10 lg:m-[50px] lg:ml-[100px]">
@@ -48,14 +49,14 @@ function Landing() {
             </div>
           </div>
           <div className="hidden lg:flex justify-center m-10 lg:mr-[100px]">
-            <img className="" src={require("../../assets/img/Landing1.png")} />
+            <img className="" src={require("src/assets/img/Landing1.png")} />
           </div>
         </div>
       </section>
       <section className="mb-5">
         <div className="lg:flex">
           <div className="hidden lg:flex justify-center m-10">
-            <img className="" src={require("../../assets/img/Landing2.png")} />
+            <img className="" src={require("src/assets/img/Landing2.png")} />
           </div>
           <div className="m-10 lg:mt-[80px] lg:mr-[100px]">
             <div className=" text-[30px] mb-10 font-semibold">
@@ -65,7 +66,7 @@ function Landing() {
               <div className="flex mb-5">
                 <img
                   className="ml-5 w-[24] h-[24] mr-5"
-                  src={require("../../assets/img/tick1.png")}
+                  src={require("src/assets/img/tick1.png")}
                   alt="logo-peworld"
                 />
                 <div className="text-[16px]"> Lorem ipsum dolor sit amet</div>
@@ -75,7 +76,7 @@ function Landing() {
               <div className="flex mb-5">
                 <img
                   className="ml-5 w-[24] h-[24] mr-5"
-                  src={require("../../assets/img/tick1.png")}
+                  src={require("src/assets/img/tick1.png")}
                   alt="logo-peworld"
                 />
                 <div className="text-[16px]"> Lorem ipsum dolor sit amet</div>
@@ -85,7 +86,7 @@ function Landing() {
               <div className="flex mb-5">
                 <img
                   className="ml-5 w-[24] h-[24] mr-5"
-                  src={require("../../assets/img/tick1.png")}
+                  src={require("src/assets/img/tick1.png")}
                   alt="logo-peworld"
                 />
                 <div className="text-[16px]"> Lorem ipsum dolor sit amet</div>
@@ -95,7 +96,7 @@ function Landing() {
               <div className="flex mb-5">
                 <img
                   className="ml-5 w-[24] h-[24] mr-5"
-                  src={require("../../assets/img/tick1.png")}
+                  src={require("src/assets/img/tick1.png")}
                   alt="logo-peworld"
                 />
                 <div className="text-[16px]"> Lorem ipsum dolor sit amet</div>
@@ -118,7 +119,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">Java</div>
@@ -126,7 +127,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">Kotlin</div>
@@ -134,7 +135,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">PHP</div>
@@ -142,7 +143,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">JavaScript</div>
@@ -154,7 +155,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">Golang</div>
@@ -162,7 +163,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">C++</div>
@@ -170,7 +171,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">Ruby</div>
@@ -178,7 +179,7 @@ function Landing() {
                   <div className="flex mb-10">
                     <img
                       className="ml-5 w-[24] h-[24] mr-5"
-                      src={require("../../assets/img/tick2.png")}
+                      src={require("src/assets/img/tick2.png")}
                       alt="logo-peworld"
                     />
                     <div className="text-[16px]">etc.</div>
@@ -188,7 +189,7 @@ function Landing() {
             </div>
           </div>
           <div className="hidden lg:flex justify-center m-10 lg:mr-[100px]">
-            <img className="" src={require("../../assets/img/Landing3.png")} />
+            <img className="" src={require("src/assets/img/Landing3.png")} />
           </div>
         </div>
       </section>
@@ -203,7 +204,7 @@ function Landing() {
                 <div className="flex justify-center">
                   <img
                     className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("../../assets/img/hikaru.jpg")}
+                    src={require("src/assets/img/hikaru.jpg")}
                     alt="logo-peworld"
                   />
                 </div>
@@ -224,7 +225,7 @@ function Landing() {
                 <div className="flex justify-center">
                   <img
                     className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("../../assets/img/hono.jpg")}
+                    src={require("src/assets/img/hono.jpg")}
                     alt="logo-peworld"
                   />
                 </div>
@@ -245,7 +246,7 @@ function Landing() {
                 <div className="flex justify-center">
                   <img
                     className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("../../assets/img/mizuki.jpg")}
+                    src={require("src/assets/img/mizuki.jpg")}
                     alt="logo-peworld"
                   />
                 </div>
@@ -285,13 +286,14 @@ function Landing() {
           </div>
         </div>
       </section>
-      <footer className="flex justify-center w-full bg-[#5E50A1]">
+      <Footer />
+      {/* <footer className="flex justify-center w-full bg-[#5E50A1]">
         <div className="container text-lg text-white">
           <div className="flex flex-col pt-[70px] pb-10">
             <div className="w-full md:w-full lg:w-[30%]">
               <img
                 className="mx-8 md:mx-[0px] lg:mx-[0px]"
-                src={require("../../assets/img/logo-white.png")}
+                src={require("src/assets/img/logo-white.png")}
                 alt="logo"
               />
               <p className="mx-8 my-8 md:mx-[0px] lg:mx-[0px] ">
@@ -311,7 +313,7 @@ function Landing() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </main>
   );
 }

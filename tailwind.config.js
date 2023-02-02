@@ -1,19 +1,16 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    screens: {
-      sm: "640px",
-
-      md: "820px",
-
-      lg: "1024px",
-    },
     extend: {
       backgroundImage: {
-        hero: "url('../../assets/img/agencyfix.png')",
-        banner: "url('../../assets/img/banner.png')",
+        hero: "url('src/assets/img/agencyfix.png')",
+        banner: "url('src/assets/img/banner.png')",
       },
+    },
+    screens: {
+      sm: "640px",
+      md: "870px",
+      lg: "1024px",
     },
   },
   plugins: [],
