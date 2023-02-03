@@ -209,7 +209,7 @@ function Landing() {
         </div>
         <div className="flex justify-center">
           <div className="w-full justify-items-center">
-            <div class="justify-items-center">
+            <div class="justify-items-center z-[-10]">
               <Swiper
                 spaceBetween={30}
                 hashNavigation={{

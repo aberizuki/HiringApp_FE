@@ -18,7 +18,7 @@ export default function LoginOption() {
                   />
                 </div>
 
-                <div className="m-10 text-[43px] font-semibold text-white flex justify-center mt-[130px]">
+                <div className="m-10 text-[36px] font-semibold text-white flex justify-center mt-[130px]">
                   Temukan developer <br /> berbakat & terbaik <br /> di berbagai
                   bidang <br /> keahlian
                 </div>
