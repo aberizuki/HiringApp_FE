@@ -2,41 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+
+body{
   margin: 0;
   padding: 0;
-  background-color: #e5e5e5;
+  background-color: #E5E5E5;
 }
 
 .container {
-  max-width: 1440px;
-  width: 100%;
-  padding: 0 150px;
-  height: 100%;
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 150px;
+    height: 100%;
 }
 
-/* BUTTON */
+/* BUTTON1 */
 
 .btn-primary {
-  background-color: #5e50a1;
-  color: #ffffff;
-  border-radius: 4px;
+    background-color: #5E50A1;
+    color: #FFFFFF;
+    border-radius: 4px;
 }
 
 .btn-secondary {
-  background-color: #fbb01799;
-  color: #ffffff;
-  border-radius: 4px;
-  border: 2px solid #fbb017;
+    background-color: #FBB01799;
+    color: #FFFFFF;
+    border-radius: 4px;
+    border: 2px solid #FBB017;
+}
+.btn-submit {
+    background-color: #FBB017;
+    color: #FFFFFF;
+    border-radius: 4px;
 }
 
 @media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 16px;
-  }
+    .container {
+        padding: 0 16px;
+    }
 }
 @media only screen and (max-width: 820px) {
-  .container {
-    padding: 0 16px;
-  }
+    .container {
+        padding: 0 16px;
+    }
 }
