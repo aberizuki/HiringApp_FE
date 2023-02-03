@@ -4,6 +4,38 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function UserLogin() {
+  const [loginForm, setLoginForm] = useState({
+    email: "",
+    password: "",
+  });
+  const [validate, setValidate] = useState({ error: false, message: "" });
+  const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    console.log(loginForm);
+    axios({
+      url: "http://localhost:5000/api/v1/auth/login",
+      method: "POST",
+      data: loginForm,
+    })
+      .then((res) => {
+        console.log(res.data.data);
+        localStorage.setItem("@userLogin", JSON.stringify(res.data.data));
+        navigate("/productAdmin");
+      })
+      .catch((err) => {
+        setValidate({ error: true, message: err.response.data.message });
+      });
+  };
+
+  // console.log(localStorage.getItem("@userLogin"));
+  useEffect(() => {
+    if (localStorage.getItem("@userLogin")) {
+      navigate("/product");
+    }
+  }, []);
+
   return (
     <>
       <main className="bg-[#F6F7F8] h-screen flex">
@@ -39,14 +71,28 @@ export default function UserLogin() {
             <div className="pl-5 pt-2 text-[14px] text-[#858D96]">
               Insert your Email and Password to login
             </div>
-            <form className=" mt-10 ml-5 mr-5">
+            <form onSubmit={handleLogin} className=" mt-10 ml-5 mr-5">
+              {validate.error && (
+                <div className="alert alert-error shadow-lg my-3">
+                  <div>
+                    {/* <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> */}
+                    <span>{validate.message}</span>
+                  </div>
+                </div>
+              )}
               <div className="mb-4">
                 <span className="ml-1 block text-[12px] text-[#858D96]">
                   Email
                 </span>
                 <input
+                  onChange={(e) =>
+                    setLoginForm({
+                      ...loginForm,
+                      email: e.target.value,
+                    })
+                  }
                   className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
+                  id="email"
                   type="text"
                   placeholder="Insert your Email"
                 />
@@ -56,25 +102,38 @@ export default function UserLogin() {
                   Password
                 </span>
                 <input
+                  onChange={(e) =>
+                    setLoginForm({
+                      ...loginForm,
+                      password: e.target.value,
+                    })
+                  }
                   className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="username"
+                  id="email"
                   type="text"
                   placeholder="Insert your Password"
                 />
               </div>
+              <Link to="/reset-password">
+                <a className="flex justify-end m-5 text-[14px]">
+                  Forgot Passsword?
+                </a>
+              </Link>
+              <div className="flex justify-center m-5">
+                <button
+                  type="submit"
+                  className="bg-[#FBB017] text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded"
+                >
+                  Submit
+                </button>
+              </div>
+              <div className="flex justify-center m-7">
+                <div className="text-[14px]">Don't have an account?</div>
+                <Link to="/user-regist">
+                  <a className="text-[14px] ml-1 text-[#FBB017]">Click here</a>
+                </Link>
+              </div>
             </form>
-            <div className="flex justify-end m-5 text-[14px]">
-              Forgot Passsword?
-            </div>
-            <div className="flex justify-center m-5">
-              <button className="bg-[#FBB017] hover:bg-blue-700 text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
-                Submit
-              </button>
-            </div>
-            <div className="flex justify-center m-7">
-              <div className="text-[14px]">Don't have an account?</div>
-              <div className="text-[14px] ml-1 text-[#FBB017]">Click here</div>
-            </div>
           </div>
         </section>
       </main>

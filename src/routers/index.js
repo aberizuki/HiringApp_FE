@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import {BrowserRouter as Router, Routes, Route, Navigate, redirect} from 'react-router-dom';
-import Home from 'src/pages/Home';
-import ProfilePortofolio from 'src/pages/Pofile-Portofolio';
-import Hire from 'src/pages/Hire';
-
-const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/profile-portofolio" element={<ProfilePortofolio/>}/>
-                <Route path="/hire-page" element={<Hire/>}/>
-            </Routes>
-        </Router>
-    )
-}
-
-
-export default App;
-=======
 import {
   BrowserRouter as Router,
   Routes,
@@ -29,6 +8,7 @@ import {
 import Home from "src/pages/Home";
 import ProfilePortofolio from "src/pages/PofilePortofolio";
 import Hire from "src/pages/Hire";
+import LoginOption from "src/pages/OptionLogin";
 import UserLogin from "src/pages/UserLogin";
 import UserRegist from "src/pages/UserRegist";
 import UserEdit from "src/pages/UserEdit";
@@ -39,6 +19,8 @@ import ConfirmPass from "src/pages/PasswordConfirm";
 import ConfirmPassLogin from "src/pages/PasswordConfirmLogin";
 import Landing from "src/pages/Landing";
 import CompEdit from "src/pages/CompEdit";
+import ChatPage from "src/pages/ChatPage";
+import RegistOption from "src/pages/OptionRegister";
 
 const App = () => {
   return (
@@ -48,6 +30,8 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/profile-portofolio" element={<ProfilePortofolio />} />
         <Route path="/hire-page" element={<Hire />} />
+        <Route path="/option-login" element={<LoginOption />} />
+        <Route path="/option-regist" element={<RegistOption />} />
         <Route path="/user-login" element={<UserLogin />} />
         <Route path="/user-regist" element={<UserRegist />} />
         <Route path="/user-edit" element={<UserEdit />} />
@@ -56,6 +40,7 @@ const App = () => {
         <Route path="/comp-edit" element={<CompEdit />} />
         <Route path="/reset-password" element={<ResetPass />} />
         <Route path="/confirm-password" element={<ConfirmPass />} />
+        <Route path="/chat" element={<ChatPage />} />
         <Route path="/confirm-password-login" element={<ConfirmPassLogin />} />
       </Routes>
     </Router>
@@ -63,4 +48,3 @@ const App = () => {
 };
 
 export default App;
->>>>>>> f9d947515261d4974332e6f026ab526bae8cd8ff

@@ -7,8 +7,8 @@ export default function FormCompanyEdit() {
         <div className="w-full bg-white rounded-lg px-5 py-5 mb-10 ">
           <div className="w-full md:w-[100%] text-base md:text-lg">
             <div className="text-[22px] mb-5 mx-5">Your Profile</div>
-            <hr className="mb-5 mx-5" />
-            <form className=" mt-10 ml-5 mr-5">
+            <div className=" mt-10 ml-5 mr-5">
+              <hr className="mb-5 mx-5" />
               <div className="mb-4">
                 <span className="ml-1 block text-[12px] text-[#858D96]">
                   Company Name
@@ -97,7 +97,7 @@ export default function FormCompanyEdit() {
                   placeholder="Insert linkedin"
                 />
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

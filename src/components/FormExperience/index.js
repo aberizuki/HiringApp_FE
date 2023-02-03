@@ -69,14 +69,14 @@ export default function FormExperience() {
                   placeholder=""
                 />
               </div>
+              <hr className="mx-5" />
+              <div className="flex justify-center m-5">
+                <button className="bg-[#FFFFF] text-[#FBB017] border border-[#FBB017] font-bold py-2 px-4 rounded  w-[100%]">
+                  Add Job Experience
+                </button>
+              </div>
+              <hr className="mx-5" />
             </form>
-            <hr className="mx-5" />
-            <div className="flex justify-center m-5">
-              <button className="bg-[#FFFFF] text-[#FBB017] border border-[#FBB017] font-bold py-2 px-4 rounded  w-[100%]">
-                Add Job Experience
-              </button>
-            </div>
-            <hr className="mx-5" />
           </div>
         </div>
       </div>

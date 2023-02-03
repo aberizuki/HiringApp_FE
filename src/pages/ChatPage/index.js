@@ -2,17 +2,17 @@ import React from "react";
 import Navbar from "src/Section/Navbar";
 import Footer from "src/Section/Footer";
 import Header from "src/components/Header";
-import HomeSection from "src/Section/HomeSection";
+import ChatSection from "src/Section/ChatSection";
 
-function Home() {
+function ChatPage() {
   return (
     <div>
       <Navbar />
       <Header />
-      <HomeSection />
+      <ChatSection />
       <Footer />
     </div>
   );
 }
 
-export default Home;
+export default ChatPage;

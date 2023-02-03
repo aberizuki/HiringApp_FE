@@ -49,12 +49,12 @@ export default function ResetPass() {
                   placeholder="Insert your Email"
                 />
               </div>
+              <div className="flex justify-center m-5">
+                <button className="bg-[#FBB017] text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
+                  Send password reset email
+                </button>
+              </div>
             </form>
-            <div className="flex justify-center m-5">
-              <button className="bg-[#FBB017] hover:bg-blue-700 text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
-                Send password reset email
-              </button>
-            </div>
           </div>
         </section>
       </main>
