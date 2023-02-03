@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -13,7 +12,7 @@ export default function UserRegist() {
               <img
                 className="pl-10 pt-10 invisible lg:visible"
                 src={require("src/assets/img/logo-white.png")}
-              />
+               alt=""/>
             </div>
             <div className="lg:text-[44px] m-[50px] mt-[130px] font-semibold text-white">
               Temukan developer <br /> berbakat & terbaik <br /> di berbagai

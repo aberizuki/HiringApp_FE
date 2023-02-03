@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import {BrowserRouter as Router, Routes, Route, Navigate, redirect} from 'react-router-dom';
-import Home from 'src/pages/Home';
-import ProfilePortofolio from 'src/pages/Pofile-Portofolio';
-import Hire from 'src/pages/Hire';
-
-const App = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/profile-portofolio" element={<ProfilePortofolio/>}/>
-                <Route path="/hire-page" element={<Hire/>}/>
-            </Routes>
-        </Router>
-    )
-}
-
-
-export default App;
-=======
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -63,4 +43,3 @@ const App = () => {
 };
 
 export default App;
->>>>>>> f9d947515261d4974332e6f026ab526bae8cd8ff
