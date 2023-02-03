@@ -118,19 +118,21 @@ export default function CompRegist() {
                   placeholder="Confirm Password"
                 />
               </div>
+              <div className="flex justify-end m-5 text-[14px]">
+                Forgot Passsword?
+              </div>
+              <div className="flex justify-center m-5">
+                <button className="bg-[#FBB017] text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
+                  Submit
+                </button>
+              </div>
+              <div className="flex justify-center m-7">
+                <div className="text-[14px]">Don't have an account?</div>
+                <div className="text-[14px] ml-1 text-[#FBB017]">
+                  Click here
+                </div>
+              </div>
             </form>
-            <div className="flex justify-end m-5 text-[14px]">
-              Forgot Passsword?
-            </div>
-            <div className="flex justify-center m-5">
-              <button className="bg-[#FBB017] hover:bg-blue-700 text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
-                Submit
-              </button>
-            </div>
-            <div className="flex justify-center m-7">
-              <div className="text-[14px]">Don't have an account?</div>
-              <div className="text-[14px] ml-1 text-[#FBB017]">Click here</div>
-            </div>
           </div>
         </section>
       </main>

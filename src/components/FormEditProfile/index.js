@@ -33,6 +33,19 @@ export default function FormUserEdit() {
               </div>
               <div className="mb-4">
                 <span className="ml-1 block text-[12px] text-[#858D96]">
+                  Employment Type
+                </span>
+                <select
+                  id=""
+                  className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-[13px] font-light"
+                >
+                  <option selected>Employment Type</option>
+                  <option>Freelance</option>
+                  <option>Full Time</option>
+                </select>
+              </div>
+              <div className="mb-4">
+                <span className="ml-1 block text-[12px] text-[#858D96]">
                   Domicile
                 </span>
                 <input
@@ -88,12 +101,12 @@ export default function FormUserEdit() {
                   placeholder=""
                 />
               </div>
+              <div className="flex justify-end m-5">
+                <button className="bg-[#FBB017] hover:bg-[#FBB017] text-white font-bold py-2 px-4 rounded">
+                  Save
+                </button>
+              </div>
             </form>
-            <div className="flex justify-end m-5">
-              <button className="bg-[#FBB017] hover:bg-[#FBB017] text-white font-bold py-2 px-4 rounded">
-                Save
-              </button>
-            </div>
           </div>
         </div>
       </div>

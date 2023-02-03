@@ -1,12 +1,18 @@
 import React from "react";
 import Footer from "src/Section/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, HashNavigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
     <main>
       <section>
         <div className="w-full flex justify-center h-[100px]">
-          <div className="flex justify-center w-full container">
+          <div className="flex justify-center w-[90%]">
             <div className="flex justify-between items-center w-full">
               <div>
                 <img
@@ -17,15 +23,19 @@ function Landing() {
               </div>
               <div className="flex m-5">
                 <div>
-                  <button className="bg-transparent text-[#5E50A1] font-semibold hover:text-white py-2 px-4 border border-[#5E50A1] hover:border-transparent rounded mr-5">
-                    Log in
-                  </button>
+                  <Link to="/option-login">
+                    <button class="bg-transparent text-[#5E50A1] font-semibold py-2 px-4 border border-[#5E50A1] rounded mr-5">
+                      Log in
+                    </button>
+                  </Link>
                 </div>
 
                 <div>
-                  <button className="bg-[#5E50A1] hover:bg-[#5E50A1] text-white font-bold py-2 px-4 rounded">
-                    Sign in
-                  </button>
+                  <Link to="/option-regist">
+                    <button class="bg-[#5E50A1] hover:bg-[#5E50A1] text-white font-bold py-2 px-4 rounded">
+                      Sign in
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -198,78 +208,91 @@ function Landing() {
           Their opinion about Peworld
         </div>
         <div className="flex justify-center">
-          <div className="w-[70%]">
-            <div className="grid grid-rows-1 md:grid-rows-1 lg:grid-cols-3 gap-px justify-items-center">
-              <div className="rounded-lg shadow-lg bg-white w-[280px]">
-                <div className="flex justify-center">
-                  <img
-                    className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("src/assets/img/hikaru.jpg")}
-                    alt="logo-peworld"
-                  />
-                </div>
-                <div className="px-5">
-                  <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                    Morita Hikaru
-                  </h5>
-                  <div className="text-gray-700 mb-4 flex justify-center">
-                    Web Developer
+          <div className="w-full justify-items-center">
+            <div class="justify-items-center z-[-10]">
+              <Swiper
+                spaceBetween={30}
+                hashNavigation={{
+                  watchState: true,
+                }}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation, HashNavigation]}
+                className="mySwiper"
+              >
+                <SwiperSlide data-hash="slide1">
+                  <div className="flex justify-center">
+                    <img
+                      className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5"
+                      src={require("src/assets/img/hikaru.jpg")}
+                      alt="logo-peworld"
+                    />
                   </div>
-                  <p className="text-gray-700 mb-4 flex text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    euismod ipsum et dui rhoncus auctor.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg shadow-lg bg-white w-[280px]">
-                <div className="flex justify-center">
-                  <img
-                    className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("src/assets/img/hono.jpg")}
-                    alt="logo-peworld"
-                  />
-                </div>
-                <div className="px-5">
-                  <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                    Tamura Hono
-                  </h5>
-                  <div className="text-gray-700 mb-4 flex justify-center">
-                    Web Developer
+                  <div class="px-5">
+                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                      Morita Hikaru
+                    </h5>
+                    <div class="text-gray-700 mb-4 flex justify-center">
+                      Web Developer
+                    </div>
+                    <p class="text-gray-700 mb-4 flex text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In euismod ipsum et dui rhoncus auctor.
+                    </p>
                   </div>
-                  <p className="text-gray-700 mb-4 flex text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    euismod ipsum et dui rhoncus auctor.
-                  </p>
-                </div>
-              </div>
-              <div className="rounded-lg shadow-lg bg-white w-[280px]">
-                <div className="flex justify-center">
-                  <img
-                    className="h-[120px] w-[120px] rounded-full border-8 border-[#FBB0175E] m-5"
-                    src={require("src/assets/img/mizuki.jpg")}
-                    alt="logo-peworld"
-                  />
-                </div>
-                <div className="px-5">
-                  <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                    Yamashita Mizuki
-                  </h5>
-                  <div className="text-gray-700 mb-4 flex justify-center">
-                    Web Developer
+                </SwiperSlide>
+                <SwiperSlide data-hash="slide2">
+                  <div className="flex justify-center">
+                    <img
+                      className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5 p-[]"
+                      src={require("src/assets/img/hono.jpg")}
+                      alt="logo-peworld"
+                    />
                   </div>
-                  <p className="text-gray-700 mb-4 flex text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                    euismod ipsum et dui rhoncus auctor.
-                  </p>
-                </div>
-              </div>
+                  <div class="px-5">
+                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                      Tamura Hono
+                    </h5>
+                    <div class="text-gray-700 mb-4 flex justify-center">
+                      Web Developer
+                    </div>
+                    <p class="text-gray-700 mb-4 flex text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In euismod ipsum et dui rhoncus auctor.
+                    </p>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide data-hash="slide3">
+                  <div className="flex justify-center">
+                    <img
+                      className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5"
+                      src={require("src/assets/img/mizuki.jpg")}
+                      alt="logo-peworld"
+                    />
+                  </div>
+                  <div class="px-5">
+                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                      Yamashita Mizuki
+                    </h5>
+                    <div class="text-gray-700 mb-4 flex justify-center">
+                      Web Developer
+                    </div>
+                    <p class="text-gray-700 mb-4 flex text-center">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      In euismod ipsum et dui rhoncus auctor.
+                    </p>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
           </div>
         </div>
       </section>
       <section className="">
         <div className="w-full flex justify-center h-[250px]">
-          <div className="flex justify-center w-[100%] container h-[100%] p-10">
+          <div className="flex justify-center w-[100%] h-[100%] p-10">
             <div className="flex justify-between items-center w-[90%] bg-banner bg-no-repeat bg-cover rounded-tl-[40px] rounded-br-[40px] rounded-tr-lg rounded-b-lg">
               <div className="text-[25px] m-5 lg:text-[36px] lg:ml-[40px] text-[#FFFFFF]">
                 Lorem ipsum <br />

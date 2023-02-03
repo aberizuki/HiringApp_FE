@@ -7,10 +7,12 @@ import EditCompanySection from "src/Section/EditCompanySection";
 function CompEdit() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <EditCompanySection />
-      <Footer />
+      <form>
+        <Navbar />
+        <Header />
+        <EditCompanySection />
+        <Footer />
+      </form>
     </div>
   );
 }

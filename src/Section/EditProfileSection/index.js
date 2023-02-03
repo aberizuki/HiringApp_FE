@@ -8,7 +8,7 @@ import FormPortofolio from "src/components/FormPortofolio";
 function PortofolioSection() {
   return (
     <div className="bg-[#E5E5E5] flex justify-center h-auto pb-24">
-      <div className="container flex justify-center">
+      <div className="flex justify-center container">
         <div className="mt-10 mb-5 text-xl font-semibold w-full md:flex md:justify-between">
           <div className="md:w-[29%]">
             <CardUserEdit name="Tamura Hono" />

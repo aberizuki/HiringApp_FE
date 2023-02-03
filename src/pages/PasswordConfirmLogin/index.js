@@ -60,12 +60,12 @@ export default function ConfirmPassLogin() {
                   placeholder="Insert your Password"
                 />
               </div>
+              <div className="flex justify-center m-5">
+                <button className="bg-[#FBB017] text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
+                  Reset Password
+                </button>
+              </div>
             </form>
-            <div className="flex justify-center m-5">
-              <button className="bg-[#FBB017] hover:bg-blue-700 text-white font-bold py-2 px-4 w-[343px] h-[50px] w-[100%] rounded">
-                Reset Password
-              </button>
-            </div>
           </div>
         </section>
       </main>
