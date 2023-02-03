@@ -1,7 +1,9 @@
 import React from "react";
 import FooterMobile from "src/components/FooterMobile";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+    const Navigate = useNavigate()
     return (
         <div>
             <div className="md:hidden sflex">
@@ -19,7 +21,7 @@ function Footer() {
                                 <p className="my-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                                     euismod ipsum et dui rhoncus auctor.</p>
                             </div>
-                            <hr class="h-[1.5px] my-8 mb  border-0 bg-white "></hr>
+                            <hr className="h-[1.5px] my-8 mb  border-0 bg-white "></hr>
                             <div className="flex justify-between">
                                 <p>2020 Pewworld. All right reserved</p>
                                 <div className="flex">

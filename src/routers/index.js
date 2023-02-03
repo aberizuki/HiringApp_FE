@@ -19,6 +19,7 @@ import ConfirmPass from "src/pages/PasswordConfirm";
 import ConfirmPassLogin from "src/pages/PasswordConfirmLogin";
 import Landing from "src/pages/Landing";
 import CompEdit from "src/pages/CompEdit";
+import SearcMobile from "src/pages/SearchMobile";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
       <Routes>
         <Route index element={<Landing />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/profile-portofolio" element={<ProfilePortofolio />} />
+        <Route path="/home/profile-portofolio" element={<ProfilePortofolio />} />
         <Route path="/hire-page" element={<Hire />} />
         <Route path="/user-login" element={<UserLogin />} />
         <Route path="/user-regist" element={<UserRegist />} />
@@ -37,6 +38,7 @@ const App = () => {
         <Route path="/reset-password" element={<ResetPass />} />
         <Route path="/confirm-password" element={<ConfirmPass />} />
         <Route path="/confirm-password-login" element={<ConfirmPassLogin />} />
+        <Route path="/search-mobile" element={<SearcMobile/>} />
       </Routes>
     </Router>
   );

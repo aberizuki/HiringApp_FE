@@ -1,11 +1,13 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 function CardInfoMobile() {
-
+    const Navigate = useNavigate()
     const data = [2, 3, 3, 5, 6, 6,6]
 
     return (
-        <div className="flex md:hidden flex-col">
+        <div 
+        onClick={()=> Navigate("/home/profile-portofolio")}
+        className="flex md:hidden flex-col">
             {
                 data.map(() => (
                     <div className="w-full bg-white rounded-lg px-4 mt-2">

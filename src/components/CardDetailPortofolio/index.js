@@ -46,12 +46,12 @@ function CardDetailPortofolio() {
                                 show
                                     ? data.map(() => (
                                         <div
-                                            className= "md:w-[47%] my-5 md:mx-[1%] xl:mx-[1%] xl:w-[23%] md:flex md:flex-col md:items-center">
+                                            className= "md:w-[47%] my-5 md:mx-[1%] lg:mx-[1%] lg:w-[23%] md:flex md:flex-col md:items-center">
                                             <img
                                                 className="w-full  my-5 "
                                                 src={require("src/assets/Rectangle 637.webp")}
                                                 alt="smhfbdhf"/>
-                                            <p className="hidden xl:flex xl:text-[#1F2A36] xl:text-sm ">Remainder app</p>
+                                            <p className="hidden lg:flex lg:text-[#1F2A36] lg:text-sm ">Remainder app</p>
                                         </div>
                                     ))
                                     : <CardPengalamanKerja/>

@@ -1,8 +1,10 @@
 import React from "react";
 import CardDetailPortofolio from "src/components/CardDetailPortofolio";
 import CardInfoDetail from "src/components/CardDetailProfile";
+import { useNavigate } from "react-router-dom";
 
 function PortofolioSection() {
+    const Navigate = useNavigate()
     return (
         <div>
             <div className="hidden md:flex md:bg-[#5E50A1] md:h-[370px] md:w-full"></div>
@@ -12,7 +14,9 @@ function PortofolioSection() {
                         className="md:mt-[-300px] mt-[70px] mb-5 text-xl font-semibold w-full md:flex md:justify-between">
                         <div className="md:w-[29%]">
                             <CardInfoDetail
-                                button={<button className = "btn-primary py-4 px-8 w-full mb-10" > Hire </button>}
+                                button={<button 
+                                onClick={()=> Navigate("/hire-page")}
+                                className = "btn-primary py-4 px-8 w-full mb-10" > Hire </button>}
                                 sosmed={<div className = "mt-16" > <div className="flex w-full my-4">
                                     <img
                                         className="w-[24px] mr-5"
