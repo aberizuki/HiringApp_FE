@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
->>>>>>> origin/abi
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,12 +20,9 @@ import ConfirmPass from "src/pages/PasswordConfirm";
 import ConfirmPassLogin from "src/pages/PasswordConfirmLogin";
 import Landing from "src/pages/Landing";
 import CompEdit from "src/pages/CompEdit";
-<<<<<<< HEAD
 import SearcMobile from "src/pages/SearchMobile";
-=======
 import ChatPage from "src/pages/ChatPage";
 import RegistOption from "src/pages/OptionRegister";
->>>>>>> origin/abi
 
 const App = () => {
   return (
