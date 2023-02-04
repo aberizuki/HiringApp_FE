@@ -15,7 +15,7 @@ function CardInfo() {
             .get(`http://localhost:5500/api/users`)
             .then(res => {
               console.log(res.data.data)
-                // setIsData(res?.data)
+                setIsData(res?.data.data)
             })
             .catch(err => console.log(err))
         }
@@ -24,7 +24,7 @@ function CardInfo() {
         getData()
     }, []);
 
-    console.log("data", isData);
+    console.log("data api", isData);
 
     return (
         <div className="hidden md:flex md:flex-col md:items-center">
@@ -37,14 +37,14 @@ function CardInfo() {
                                     <img
                                         className="w-[100px] rounded-full"
                                         // src={require("src/assets/user-image.webp")}
-                                        src={item.avatar}
+                                        src={`http://localhost:5500/api/users`}
                                         alt="smhfbdhf"
                                         />
                                 </div>
                                 <div>
-                                    <p className="text-2xl text-black font-semibold mb-3">{item.name}</p>
-                                    <p className="text-[#9EA0A5]">{item.jobs}</p>
-                                    <p className="text-[#9EA0A5] mb-2">{item.address}</p>
+                                    <p className="text-2xl text-black font-semibold mb-3">{item.full_name}</p>
+                                    <p className="text-[#9EA0A5]">{item.job_desk}</p>
+                                    <p className="text-[#9EA0A5] mb-2">{item.domicile}</p>
                                     <div>
                                         <button className="btn-secondary px-6 py-1 mr-3">PHP</button>
                                         <button className="btn-secondary px-6 py-1 mr-3">JavaScript</button>
