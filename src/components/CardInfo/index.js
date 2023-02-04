@@ -12,10 +12,10 @@ function CardInfo() {
 
     const getData = () => {
         axios
-            .get(`https://63aaeb1dfdc006ba604fddf4.mockapi.io/worker`)
+            .get(`http://localhost:5500/api/users`)
             .then(res => {
-              // console.log(res)
-                setIsData(res?.data)
+              console.log(res.data.data)
+                // setIsData(res?.data)
             })
             .catch(err => console.log(err))
         }
