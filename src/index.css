@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1440px!important;
   width: 100%;
   padding: 0 150px;
   height: 100%;
@@ -70,6 +70,12 @@ body {
     padding: 0 16px;
   }
 }
+/* @media only screen and (min-width: 1024px) {
+  .container {
+    padding: 0 16px;
+    max-width: 1440px!important;
+  }
+} */
 
 @media only screen and (max-width: 1024px) {
   .swiper {
