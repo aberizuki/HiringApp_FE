@@ -7,9 +7,15 @@ function CardFilter(props) {
     const Btn = "py-5 w-full text-start border-b-[2px] rounded hover:bg- hover:text-[#5E50A1] c" +
             "ursor-pointer "
 
+
+    const onChnageValue = (e) =>{
+        setSortir(e)
+        setShow(!show)
+    }
+
     return (
         <div className="hidden md:flex md:justify-center md:my-10 relative">
-            <form className="bg-white p-2 flex text-sm justify-between w-full rounded-lg ">
+            <div className="bg-white p-2 flex text-sm justify-between w-full rounded-lg ">
                 <input className="w-[60%]" type="text" placeholder="Search for any skill"/>
                 <div className="flex items-center">
                     <div className="border-r-[2px] h-full flex items-center ">
@@ -31,32 +37,9 @@ function CardFilter(props) {
                 </div>
                 {
                     show
-                        ? <> < img
-                    src = {
-                        require("src/assets/bg-sort.webp")
-                    }
-                    alt = "dsadas"
-                    className = "w-[300px] h-[300px] absolute top-10 right-[10%]" /> <div className="absolute top-[100px] right-[11.5%] px-5">
-                        <div className="z-10 flex-col flex items-start text-lg">
-                            <div
-                                onClick={() => {
-                                    setSortir("Skill");
-                                    setShow(!show)
-                                }}
-                                className={Btn}>Sortir berdasarkan Skill</div>
-                            <div onClick={() => {
-                                    setSortir("Freelance");
-                                    setShow(!show)
-                                }} className={Btn}>Sortir berdasarkan Freelance</div>
-                            <div onClick={() => {
-                                    setSortir("Fulltime");
-                                    setShow(!show)
-                                }} className={Btn}>Sortir berdasarkan Fulltime</div>
-                        </div>
-                    </div>
-                </>: null
+                        ? (<CardSort onGetValue={(e)=>onChnageValue(e)} />): null
                 }
-            </form>
+            </div>
         </div>
     )
 }
