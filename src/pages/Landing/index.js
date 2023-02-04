@@ -24,7 +24,7 @@ function Landing() {
               <div className="flex m-5">
                 <div>
                   <Link to="/option-login">
-                    <button class="bg-transparent text-[#5E50A1] font-semibold py-2 px-4 border border-[#5E50A1] rounded mr-5">
+                    <button className="bg-transparent text-[#5E50A1] font-semibold py-2 px-4 border border-[#5E50A1] rounded mr-5">
                       Log in
                     </button>
                   </Link>
@@ -32,7 +32,7 @@ function Landing() {
 
                 <div>
                   <Link to="/option-regist">
-                    <button class="bg-[#5E50A1] hover:bg-[#5E50A1] text-white font-bold py-2 px-4 rounded">
+                    <button className="bg-[#5E50A1] hover:bg-[#5E50A1] text-white font-bold py-2 px-4 rounded">
                       Sign in
                     </button>
                   </Link>
@@ -209,7 +209,7 @@ function Landing() {
         </div>
         <div className="flex justify-center">
           <div className="w-full justify-items-center">
-            <div class="justify-items-center z-[-10]">
+            <div className="justify-items-center z-[-10]">
               <Swiper
                 spaceBetween={30}
                 hashNavigation={{
@@ -230,14 +230,14 @@ function Landing() {
                       alt="logo-peworld"
                     />
                   </div>
-                  <div class="px-5">
-                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                  <div className="px-5">
+                    <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
                       Morita Hikaru
                     </h5>
-                    <div class="text-gray-700 mb-4 flex justify-center">
+                    <div className="text-gray-700 mb-4 flex justify-center">
                       Web Developer
                     </div>
-                    <p class="text-gray-700 mb-4 flex text-center">
+                    <p className="text-gray-700 mb-4 flex text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       In euismod ipsum et dui rhoncus auctor.
                     </p>
@@ -251,14 +251,14 @@ function Landing() {
                       alt="logo-peworld"
                     />
                   </div>
-                  <div class="px-5">
-                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                  <div className="px-5">
+                    <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
                       Tamura Hono
                     </h5>
-                    <div class="text-gray-700 mb-4 flex justify-center">
+                    <div className="text-gray-700 mb-4 flex justify-center">
                       Web Developer
                     </div>
-                    <p class="text-gray-700 mb-4 flex text-center">
+                    <p className="text-gray-700 mb-4 flex text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       In euismod ipsum et dui rhoncus auctor.
                     </p>
@@ -272,14 +272,14 @@ function Landing() {
                       alt="logo-peworld"
                     />
                   </div>
-                  <div class="px-5">
-                    <h5 class="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
+                  <div className="px-5">
+                    <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
                       Yamashita Mizuki
                     </h5>
-                    <div class="text-gray-700 mb-4 flex justify-center">
+                    <div className="text-gray-700 mb-4 flex justify-center">
                       Web Developer
                     </div>
-                    <p class="text-gray-700 mb-4 flex text-center">
+                    <p className="text-gray-700 mb-4 flex text-center">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       In euismod ipsum et dui rhoncus auctor.
                     </p>
