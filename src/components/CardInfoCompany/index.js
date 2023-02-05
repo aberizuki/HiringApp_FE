@@ -7,7 +7,6 @@ function CardInfoCompany({getSearch}) {
     // console.log("data get company" ,getSearch);
     // const {isFilter,param} = props
 
-
     const [isComp, setIsComp] = useState(false)
 
     useEffect(() => {
@@ -20,7 +19,6 @@ function CardInfoCompany({getSearch}) {
             setIsComp(false)
         }
     }, [isComp])
-
 
     const navigate = useNavigate()
     const [isData, setIsData] = useState([])
@@ -44,7 +42,6 @@ function CardInfoCompany({getSearch}) {
             return (`http://localhost:5500/api/company/?limit=1&page=${isPage}`)
         }
     }
-    
 
     console.log("tesssss",url(getSearch));
     const getData = () => {
@@ -75,7 +72,7 @@ function CardInfoCompany({getSearch}) {
                                     <div className="mr-5">
                                         <img className="w-[100px] rounded-full"
                                             // src={require("src/assets/user-image.webp")}
-                                            src={`http://localhost:5500/api/users`} alt="smhfbdhf"/>
+                                            src={`http://localhost:5500/uploads/images/${item.img_company}`} alt="smhfbdhf"/>
                                     </div>
                                     <div>
                                         <p className="text-2xl text-black font-semibold mb-3">{item.name_company}</p>
@@ -93,7 +90,7 @@ function CardInfoCompany({getSearch}) {
                                 </div>
                                 <div >
                                     <button
-                                        onClick={() => isComp ?  navigate("profile-portofolio") :navigate("profile-portofolio") }
+                                        onClick={() => navigate(`profile-portofolio/${item.id_company}`)}
                                         className="btn-primary py-4 px-8 mr-12">
                                         Lihat Profile
                                     </button>
