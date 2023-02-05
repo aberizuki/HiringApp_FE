@@ -3,11 +3,12 @@ import CardSort from "./CardSort";
 function CardFilter(props) {
 
     const [show, setShow] = useState(false)
+    const [isComp, setIsComp] = useState(false)
     const [sortir, setSortir] = useState("")
     const Btn = "py-5 w-full text-start border-b-[2px] rounded hover:bg- hover:text-[#5E50A1] c" +
             "ursor-pointer "
 
-    const {getValue} = props
+    const {getValue, getSearch} = props
 
     
     const onChnageValue = (e) =>{
@@ -15,12 +16,27 @@ function CardFilter(props) {
         setShow(!show)
         getValue(e)
     }
+
+    useEffect(() => {
+        let dataLocal = localStorage.getItem('@userLogin')
+        dataLocal = JSON.parse(dataLocal)
+        let role = dataLocal?.user?.role
+        if (role == "recruiter") {
+            setIsComp(true)
+        } else {
+            setIsComp(false)
+        }
+    }, [isComp])
+
     
 
+
     return (
-        <div className="hidden md:flex md:justify-center md:my-10 relative">
+        <div className="hidden md:flex md:justify-center md:my-14 relative">
             <div className="bg-white p-2 flex text-sm justify-between w-full rounded-lg ">
-                <input className="w-[60%]" type="text" placeholder="Search for any skill"/>
+                <input 
+                onChange={(e)=> getSearch(e.target.value)}
+                className="w-[60%]" type="text" placeholder="Search for any skill"/>
                 <div className="flex items-center">
                     <div className="border-r-[2px] h-full flex items-center ">
                         <img
@@ -31,7 +47,7 @@ function CardFilter(props) {
                     <input
                         value={sortir}
                         onClick={() => setShow(!show) }
-                        className="w-[50%] ml-5 font-semibold text-[#5E50A1] border-none"
+                        className="w-[50%] ml-5 font-semibold text-[#5E50A1] border-none focus:outline-none"
                         type="text"
                         placeholder="Kategori"
                         />
@@ -40,8 +56,7 @@ function CardFilter(props) {
                     </button>
                 </div>
                 {
-                    show
-                        ? (<CardSort onGetValue={(e)=>onChnageValue(e)} />): null
+                    show? (<CardSort onGetValue={(e)=>onChnageValue(e)} />): null
                 }
             </div>
         </div>

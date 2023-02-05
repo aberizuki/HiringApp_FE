@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import BeforeLogin from "./before.login";
 
-function Navbar({setIsLogin}) {
+function Navbar({setIsLogin, findJob}) {
     const [login, setLogin] = useState(false)
     useEffect(() => {
 
@@ -29,6 +29,7 @@ function Navbar({setIsLogin}) {
             </button>
             <button
                 onClick={() => {
+                    navigate("/")
                     localStorage.removeItem("@userLogin");
                     setIsLogin(false);
                 }}
@@ -50,6 +51,8 @@ function Navbar({setIsLogin}) {
                             src={require("src/assets/logo-powerland.webp")}
                             alt="logo-peworld"/>
                     </div>
+                    {/* {login ?null : findJob } */}
+                    {findJob }
                     {
                         login
                             ? <div className="flex">
