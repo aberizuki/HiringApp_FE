@@ -5,16 +5,33 @@ import axios from "axios";
 
 function CardInfo(props) {
 
-    const {isFilter,param} = props
+    const {search,param} = props
     const navigate = useNavigate()
     const [isData, setIsData] = useState([])
-    console.log("param info", param);
-    // const [filter, setFilter]= useState("")
+    const [isPage, setIspage] = useState()
+    // console.log("param info", param);
+    // // const [filter, setFilter]= useState("")
+    // console.log("is page data",isPage);
+
+    const url = (param)=>{
+        if (search !== "") {
+            return(`http://localhost:5500/api/users?search=${search}`)
+        } else if(param === "freelance") {
+            return(`http://localhost:5500/api/users?employment_type=${param}`) 
+        } else if(param === "fulltime") {
+            return(`http://localhost:5500/api/users?employment_type=${param}`) 
+        }else{
+            return(`http://localhost:5500/api/users?search=&page=${isPage}&limit=2`)
+        }
+    }
+
+    console.log("test url", url(param))
+    
 
     const getData = () => {
         console.log("get data", param);
         axios
-            .get(`http://localhost:5500/api/users?employment_type=${param}`)
+            .get(url(param))
             .then(res => {
               console.log(res.data.data)
                 setIsData(res?.data.data)
@@ -24,7 +41,7 @@ function CardInfo(props) {
 
     useEffect(() => {
         getData()
-    }, [param]);
+    }, [param,search, isPage]);
 
     console.log("data api", isData);
 
@@ -46,7 +63,10 @@ function CardInfo(props) {
                                 <div>
                                     <p className="text-2xl text-black font-semibold mb-3">{item.full_name}</p>
                                     <p className="text-[#9EA0A5]">{item.job_desk}</p>
-                                    <p className="text-[#9EA0A5] mb-2">{item.domicile}</p>
+                                    <div className="flex mb-2 items-center">
+                                        <img src={require("src/assets/map-pin.png")} className="w-4 h-4 mr-3"/>
+                                        <p className="text-[#9EA0A5]">{item.domicile}</p>
+                                    </div>
                                     <div>
                                         <button className="btn-secondary px-6 py-1 mr-3">PHP</button>
                                         <button className="btn-secondary px-6 py-1 mr-3">JavaScript</button>
@@ -66,7 +86,7 @@ function CardInfo(props) {
                 }
 
             </div>
-            <Paginations/>
+            <Paginations getPage={(e)=> setIspage(e) }/>
         </div>
     )
 }

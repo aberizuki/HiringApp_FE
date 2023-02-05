@@ -1,7 +1,6 @@
 function CardSort(props) {
     const {onGetValue} =props
 
-
     const Btn = "py-5 w-full text-start border-b-[2px] rounded hover:bg- hover:text-[#5E50A1]"
     return(
     <>
