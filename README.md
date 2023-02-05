@@ -6,8 +6,8 @@ This is a frontend part for [api project](https://github.com/ARRAY-4/backend).
 
 To get the React app running locally:
 
-* Clone this repo with `git clone https://github.com/NamaTeam/tickitz-frontend-2.git`
-* `cd tickitz-frontend-2`
+* Clone this repo with `git clone https://github.com/ARRAY-4/frontend.git`
+* `cd frontend`
 * `npm install` to install all required dependencies
 * Create a `.env` file and reference the `dotenv.example` file
 * `npm start` to start the local server
