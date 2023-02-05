@@ -1,5 +1,7 @@
 import axios from "axios";
+import { getAllUsers } from "../../redux/actions/talent";
 import React, {useEffect, useState} from "react";
+import { useDispatch, useSelector } from 'react-redux'
 
 function CardDetailPortofolio() {
     const url = process.env.REACT_APP_HOST

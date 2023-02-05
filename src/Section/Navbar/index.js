@@ -33,7 +33,7 @@ function Navbar({ setIsLogin }) {
         <div className="flex justify-between items-center w-full">
           <div>
             <img
-              onClick={() => navigate("/home")}
+              onClick={() => navigate("/")}
               className="w-[127px] h-[35px]"
               src={require("src/assets/logo-powerland.webp")}
               alt="logo-peworld"

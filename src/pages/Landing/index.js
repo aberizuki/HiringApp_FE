@@ -14,12 +14,18 @@ function Landing() {
         <div className="w-full flex justify-center h-[100px]">
           <div className="flex justify-center w-[90%]">
             <div className="flex justify-between items-center w-full">
-              <div>
+              <div className="flex">
                 <img
                   className="ml-5"
                   src={require("src/assets/img/logo.png")}
                   alt="logo-peworld"
                 />
+                <Link to='/home'>
+                  <h4 className="font-semibold pl-10 px-4">Find Talent</h4>
+                </Link>
+                <Link to='/home'>
+                  <h4 className="font-semibold px-4">Find Work</h4>
+                </Link>
               </div>
               <div className="flex m-5">
                 <div>
