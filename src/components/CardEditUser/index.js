@@ -26,7 +26,7 @@ function CardUserEdit(props) {
                 <div className="text-base font-normal">
                   <p className="text-[#9EA0A5] mb-3">Bandung</p>
                   <p className="text-[#9EA0A5] mb-3">Talent</p>
-                  <p className="text-[#9EA0A5] mb-3">Talent</p>
+                  {/* <p className="text-[#9EA0A5] mb-3">Talent</p> */}
                   <p className="text-[#9EA0A5]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vestibulum erat orci, mollis nec gravida sed, ornare quis

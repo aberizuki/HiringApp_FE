@@ -1,6 +1,28 @@
-import React, {useState} from "react";
+import axios from "axios";
+import { getAllUsers } from "../../redux/actions/talent";
+import React, {useEffect, useState} from "react";
+import { useDispatch, useSelector } from 'react-redux'
 
 function CardDetailPortofolio() {
+    const url = process.env.REACT_APP_HOST
+    const [dataPortfolio, setDataPortfolio] = useState([])
+
+    useEffect(() => {
+        axios.get(`${url}/api/users-portfolio`)
+            .then(res => setDataPortfolio(res.data.data))
+            .catch((err) => console.log(err))
+    }, [])
+
+    // const loadPortfolio = async (limit, page) => {
+    //     return await axios
+    //         .get(`${url}/api/users-portfolio`)
+    //         .then((res) => {
+    //             setDataPortfolio(res.data.data);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    // }
 
     const data = [
         2,
@@ -43,17 +65,19 @@ function CardDetailPortofolio() {
                         </div>
                         <div className=" my-5 flex  w-full flex-wrap ">
                             {
-                                show
-                                    ? data.map(() => (
+                                show ? dataPortfolio.map((item) => {
+                                    const img = `${url}/uploads/images/${item.images[0].filename}`
+                                    return (
                                         <div
-                                            className= "md:w-[47%] my-5 md:mx-[1%] lg:mx-[1%] lg:w-[23%] md:flex md:flex-col md:items-center">
+                                            className="md:w-[47%] my-5 md:mx-[1%] lg:mx-[1%] lg:w-[23%] md:flex md:flex-col md:items-center">
                                             <img
                                                 className="w-full  my-5 "
-                                                src={require("src/assets/Rectangle 637.webp")}
-                                                alt="smhfbdhf"/>
-                                            <p className="hidden lg:flex lg:text-[#1F2A36] lg:text-sm ">Remainder app</p>
+                                                src={img}
+                                                alt="smhfbdhf" />
+                                            <p className="hidden lg:flex lg:text-[#1F2A36] lg:text-sm ">{item.project_name}</p>
                                         </div>
-                                    ))
+                                    )
+                                })
                                     : <CardPengalamanKerja/>
                             }
                         </div>
