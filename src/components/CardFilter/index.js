@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import CardSort from "./CardSort";
 function CardFilter(props) {
 
@@ -7,11 +7,15 @@ function CardFilter(props) {
     const Btn = "py-5 w-full text-start border-b-[2px] rounded hover:bg- hover:text-[#5E50A1] c" +
             "ursor-pointer "
 
+    const {getValue} = props
 
+    
     const onChnageValue = (e) =>{
         setSortir(e)
         setShow(!show)
+        getValue(e)
     }
+    
 
     return (
         <div className="hidden md:flex md:justify-center md:my-10 relative">

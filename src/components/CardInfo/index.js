@@ -3,16 +3,18 @@ import {useNavigate} from "react-router-dom";
 import Paginations from "./paginations";
 import axios from "axios";
 
-function CardInfo() {
-    const navigate = useNavigate()
-    const data = [2, 3, 3, 5]
+function CardInfo(props) {
 
+    const {isFilter,param} = props
+    const navigate = useNavigate()
     const [isData, setIsData] = useState([])
-    const [filter, setFilter]= useState("")
+    console.log("param info", param);
+    // const [filter, setFilter]= useState("")
 
     const getData = () => {
+        console.log("get data", param);
         axios
-            .get(`http://localhost:5500/api/users`)
+            .get(`http://localhost:5500/api/users?employment_type=${param}`)
             .then(res => {
               console.log(res.data.data)
                 setIsData(res?.data.data)
@@ -22,7 +24,7 @@ function CardInfo() {
 
     useEffect(() => {
         getData()
-    }, []);
+    }, [param]);
 
     console.log("data api", isData);
 
