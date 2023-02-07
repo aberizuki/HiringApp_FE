@@ -7,10 +7,10 @@ import CardInfoCompany from "src/components/CardInfoCompany";
 function HomeSection() {
     const [param,setParam] = useState("")
     const [isSearch,setIsSearch] = useState("")
-    console.log("tesssssss searchhhjh",isSearch)
+    console.log("ini param in home", param);
 
     const getData = (value) =>{
-        console.log('valuee',value)
+        console.log('valuee value',value)
         setParam(value)
     }
 
@@ -31,7 +31,7 @@ function HomeSection() {
                 </div>
                 {/*  */}
                 {role === "recruiter" ? <CardInfo param={param} search={isSearch}/> :
-                    <CardInfoCompany getSearch={isSearch}/>
+                    <CardInfoCompany getSearch={isSearch} getFilter={param}/>
                 }
                 
                 <CardInfoMobile/>

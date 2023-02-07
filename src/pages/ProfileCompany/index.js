@@ -1,21 +1,17 @@
 import React from "react";
 import Navbar from "src/Section/Navbar";
 import Footer from "src/Section/Footer";
-import Header from "src/components/Header";
-import HireSection from "src/Section/HireSection";
+import ProfileCompanySection from "src/Section/ProfileCompanySection";
 
-
-
-function Hire() {
+function ProfileComapany() {
     return(
         <div>
             <Navbar/>
-            <Header/>
-            <HireSection/>
+            <ProfileCompanySection/>
             <Footer/>
         </div>
     )
 }
 
 
-export default Hire
+export default ProfileComapany

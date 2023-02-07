@@ -3,11 +3,11 @@ import {useNavigate} from "react-router-dom";
 import Paginations from "./paginations";
 import axios from "axios";
 
-function CardInfoCompany({getSearch}) {
+function CardInfoCompany({getSearch, getFilter}) {
     // console.log("data get company" ,getSearch);
     // const {isFilter,param} = props
 
-
+    console.log("data filter company",getFilter);
     const [isComp, setIsComp] = useState(false)
 
     useEffect(() => {
@@ -40,8 +40,13 @@ function CardInfoCompany({getSearch}) {
     const url =(getSearch)=>{
         if (getSearch !== "") {
             return(`http://localhost:5500/api/company/?company=${getSearch}`)    
-        } else{
-            return (`http://localhost:5500/api/company/?limit=1&page=${isPage}`)
+        } else if(getFilter == "NONIT"){
+            return(`http://localhost:5500/api/company/?field=${getFilter}`) 
+        }else if(getFilter == "IT"){
+            return(`http://localhost:5500/api/company/?field=${getFilter}`) 
+        }
+        else{
+            return (`http://localhost:5500/api/company/?limit=3&page=${isPage}`)
         }
     }
     
@@ -61,7 +66,7 @@ function CardInfoCompany({getSearch}) {
 
     useEffect(() => {
         getData()
-    }, [getSearch, isPage]);
+    }, [getSearch, isPage, getFilter]);
 
     console.log("data api company", isData);
 
@@ -93,7 +98,7 @@ function CardInfoCompany({getSearch}) {
                                 </div>
                                 <div >
                                     <button
-                                        onClick={() => isComp ?  navigate("profile-portofolio") :navigate("profile-portofolio") }
+                                        onClick={()=>navigate("/home/profile-comp") }
                                         className="btn-primary py-4 px-8 mr-12">
                                         Lihat Profile
                                     </button>

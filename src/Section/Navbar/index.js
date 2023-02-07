@@ -10,6 +10,7 @@ function Navbar({setIsLogin, findJob}) {
             setLogin(true)
         } else {
             setLogin(false)
+            navigate("/")   
         }
     }, [])
 
@@ -29,7 +30,6 @@ function Navbar({setIsLogin, findJob}) {
             </button>
             <button
                 onClick={() => {
-                    navigate("/")
                     localStorage.removeItem("@userLogin");
                     setIsLogin(false);
                 }}
@@ -61,6 +61,7 @@ function Navbar({setIsLogin, findJob}) {
                                         src={require("src/assets/bell-icon.png")}
                                         alt="logo-peworld"/>
                                     <img
+                                        onClick={() => navigate("/chat")}
                                         className="w-[24px] h-[24px] mr-5"
                                         src={require("src/assets/mail-icon.png")}
                                         alt="logo-peworld"/>

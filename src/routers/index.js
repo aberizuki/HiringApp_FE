@@ -23,10 +23,10 @@ import CompEdit from "src/pages/CompEdit";
 import SearcMobile from "src/pages/SearchMobile";
 import ChatPage from "src/pages/ChatPage";
 import RegistOption from "src/pages/OptionRegister";
-
 import InvalidRoute from 'src/pages/InvalidRoute';
 import { Provider } from "react-redux"
 import configureStore from "../redux/store"
+import ProfileComapany from "src/pages/ProfileCompany";
 
 const App = () => {
   const { store } = configureStore()
@@ -51,7 +51,7 @@ const App = () => {
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/confirm-password-login" element={<ConfirmPassLogin />} />
           <Route path="/search-mobile" element={<SearcMobile/>} />
-
+          <Route path="/home/profile-comp" element={<ProfileComapany/>} />
           <Route path='404' element={<InvalidRoute />} />
           <Route path='*' exact element={<Navigate to='404' />} />
         </Routes>

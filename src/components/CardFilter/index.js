@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import CardSort from "./CardSort";
+import CardSortCompany from "./CardSortCompany";
 function CardFilter(props) {
 
     const [show, setShow] = useState(false)
@@ -7,7 +8,7 @@ function CardFilter(props) {
     const [sortir, setSortir] = useState("")
     const Btn = "py-5 w-full text-start border-b-[2px] rounded hover:bg- hover:text-[#5E50A1] c" +
             "ursor-pointer "
-
+    
     const {getValue, getSearch} = props
 
     
@@ -28,6 +29,8 @@ function CardFilter(props) {
         }
     }, [isComp])
 
+
+    console.log("ini role", isComp);
     
 
 
@@ -55,9 +58,11 @@ function CardFilter(props) {
                         Search
                     </button>
                 </div>
-                {
-                    show? (<CardSort onGetValue={(e)=>onChnageValue(e)} />): null
-                }
+                { isComp ? <>
+                    { show? (<CardSort onGetValue={(e)=>onChnageValue(e)} />): null}
+                </> : <>
+                    { show? (<CardSortCompany onGetValue={(e)=>onChnageValue(e)} />): null}
+                </>}
             </div>
         </div>
     )
