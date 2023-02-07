@@ -31,7 +31,7 @@ import {useNavigate} from "react-router-dom";
                     className={filter === 2
                         ? btnBlue
                         : btnLight}>2</button>
-                <button
+                {/* <button
                     onClick={() => {
                         setFilter(3)
                         getPage(3)
@@ -62,7 +62,7 @@ import {useNavigate} from "react-router-dom";
                     }}
                     className={filter === 6
                         ? btnBlue
-                        : btnLight}>6</button>
+                        : btnLight}>6</button> */}
                 <button className="btn-primary py-4 px-5">
                     <img src={require("src/assets/max.png")} className="w-[12px]" alt=""/>
                 </button>

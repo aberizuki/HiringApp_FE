@@ -1,7 +1,21 @@
 
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 
 function CardInfoDetail(props) {
+    const url = process.env.REACT_APP_HOST
+    const Navigate = useNavigate()
+    const { id } = useParams()
+    const [dataUser, setDataUser] = useState('')
+
+    // get data product
+    useEffect(() => {
+        axios.get(`${url}/api/users/${id}`)
+            .then(res => setDataUser(res.data.data))
+            .catch((err) => console.log(err))
+    }, [])
+    const img = `${url}/uploads/images/${dataUser.img_profile}`
     
     const {button, sosmed} = props
 
@@ -36,23 +50,23 @@ function CardInfoDetail(props) {
                                 <div className="mr-5 flex justify-center w-full">
                                     <img
                                         className="w-[150px]"
-                                        src={require("src/assets/user-image.webp")}
+                                        src={img}
                                         alt="smhfbdhf"/>
                                 </div>
                                 <div className="">
-                                    <p className="text-3xl text-black font-semibold my-5">Louis Tomlinson</p>
-                                    <p className="text-black mb-2">Web developer</p>
-                                    <p className="text-[#9EA0A5] mb-3 font-normal text-base">Freelance</p>
+                                    <p className="text-3xl text-black font-semibold my-5">{dataUser.full_name}</p>
+                                    <p className="text-black mb-2">{dataUser.job_desk}</p>
+                                    <p className="text-[#9EA0A5] mb-3 font-normal text-base">{dataUser.employment_type}</p>
                                     <div className="text-base font-normal">
                                         <div className="flex items-center mb-3">
                                             <img src={require("src/assets/map-pin.png")} alt="maps" className="w-4 h-4 mr-2"/>
-                                            <p className="text-[#9EA0A5]">Bandung</p>
+                                            <p className="text-[#9EA0A5]">{dataUser.domicile}</p>
                                         </div>
                                         <div className="flex items-center mb-3">
                                             <img src={require("src/assets/phone-icon.png")} alt="maps" className="w-4 h-4 mr-2"/>
-                                            <p className="text-[#9EA0A5]">0812 - 3456 - 789</p>
+                                            <p className="text-[#9EA0A5]">{dataUser.phone}</p>
                                         </div>
-                                        <p className="text-[#9EA0A5] mb-3">Talent</p>
+                                        <p className="text-[#9EA0A5] mb-3">{dataUser.role}</p>
                                         <p className="text-[#9EA0A5] mb-10">Lorem ipsum dolor sit amet, consectetur
                                             adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna.
                                             Curabitur eu lacus fringilla, vestibulum risus at.</p>

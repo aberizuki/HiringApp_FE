@@ -11,7 +11,7 @@ function PortofolioSection() {
       <div className="flex justify-center container">
         <div className="mt-10 mb-5 text-xl font-semibold w-full md:flex md:justify-between">
           <div className="md:w-[29%]">
-            <CardUserEdit name="Tamura Hono" />
+            <CardUserEdit />
           </div>
           <div className="md:w-[69%]">
             <FormUserEdit />
