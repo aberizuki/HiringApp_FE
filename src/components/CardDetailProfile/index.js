@@ -13,7 +13,6 @@ function CardInfoDetail(props) {
     useEffect(() => {
         axios.get(`${url}/api/users/${id}`)
             .then(res => setDataUser(res.data.data))
-            .catch((err) => console.log(err))
     }, [])
     const img = `${url}/uploads/images/${dataUser.img_profile}`
     

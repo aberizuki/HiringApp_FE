@@ -10,7 +10,6 @@ function CardDetailPortofolio() {
     useEffect(() => {
         axios.get(`${url}/api/users-portfolio`)
             .then(res => setDataPortfolio(res.data.data))
-            .catch((err) => console.log(err))
     }, [])
 
     // const loadPortfolio = async (limit, page) => {

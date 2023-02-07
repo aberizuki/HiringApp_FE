@@ -7,13 +7,11 @@ function CardInfoMobile(props) {
     const Navigate = useNavigate()
     const {param} = props
     const [isData, setIsData] = useState([])
-    console.log("param info monile", param);
 
     let dataLocal = localStorage.getItem('@userLogin')
     dataLocal = JSON.parse(dataLocal)
     // console.log("data ", dataLocal?.company?.role);
     let role = dataLocal?.user?.role
-    console.log("ini data role",role);
 
     const getData = () => {
         axios

@@ -4,7 +4,7 @@ import Input from "../Input";
 export default function FormCompanyEdit() {
   const [param,SetParam] = useState ({username:'',email:''})
 
-  console.log('param',param,)
+
   return (
     <>
 

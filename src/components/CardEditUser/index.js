@@ -14,7 +14,6 @@ function CardUserEdit() {
   useEffect(() => {
     axios.get(`${url}/api/users/${idLogin}`)
       .then(res => setDataProfile(res.data.data))
-      .catch((err) => console.log(err))
   }, [])
 
   const onImageUpload = (e) => {

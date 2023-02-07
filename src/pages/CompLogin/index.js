@@ -13,7 +13,7 @@ export default function CompLogin() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    console.log(loginForm);
+
     axios({
       url: "http://localhost:5500/api/auth/login-company",
       method: "POST",

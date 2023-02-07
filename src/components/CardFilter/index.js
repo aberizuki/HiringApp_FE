@@ -30,7 +30,6 @@ function CardFilter(props) {
     }, [isComp])
 
 
-    console.log("ini role", isComp);
     
 
 

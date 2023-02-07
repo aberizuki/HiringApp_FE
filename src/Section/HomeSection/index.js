@@ -18,7 +18,6 @@ function HomeSection() {
     dataLocal = JSON.parse(dataLocal)
     // console.log("data ", dataLocal?.company?.role);
     let role = dataLocal?.user?.role  
-    console.log("data role", role); 
 
     return (
         <div className="bg-[#E5E5E5] flex justify-center h-auto pb-24">

@@ -43,7 +43,6 @@ function CardInfo(props) {
         getData()
     }, [param,search, isPage]);
 
-    console.log("data api", isData);
 
     return (
         <div className="hidden md:flex md:flex-col md:items-center">

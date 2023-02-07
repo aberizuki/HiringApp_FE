@@ -7,7 +7,6 @@ function CardInfoCompany({getSearch, getFilter}) {
     // console.log("data get company" ,getSearch);
     // const {isFilter,param} = props
 
-    console.log("data filter company",getFilter);
     const [isComp, setIsComp] = useState(false)
 
     useEffect(() => {
@@ -24,7 +23,6 @@ function CardInfoCompany({getSearch, getFilter}) {
     const navigate = useNavigate()
     const [isData, setIsData] = useState([])
     const [isPage, setIspage] = useState()
-    console.log("company filter", isPage);
 
     // const url =(getSearch)=>{
     //     if (getSearch != "") {
@@ -39,9 +37,9 @@ function CardInfoCompany({getSearch, getFilter}) {
     const url =(getSearch)=>{
         if (getSearch !== "") {
             return(`http://localhost:5500/api/company/?company=${getSearch}`)    
-        } else if(getFilter == "NONIT"){
+        } else if(getFilter == "NonTech"){
             return(`http://localhost:5500/api/company/?field=${getFilter}`) 
-        }else if(getFilter == "IT"){
+        }else if(getFilter == "Tech"){
             return(`http://localhost:5500/api/company/?field=${getFilter}`) 
         }
         else{
@@ -49,7 +47,6 @@ function CardInfoCompany({getSearch, getFilter}) {
         }
     }
 
-    console.log("tesssss",url(getSearch));
     const getData = () => {
         axios
             .get(url(getSearch))
@@ -66,7 +63,6 @@ function CardInfoCompany({getSearch, getFilter}) {
         getData()
     }, [getSearch, isPage, getFilter]);
 
-    console.log("data api company", isData);
 
     return (
         <div className="hidden md:flex md:flex-col md:items-center">
@@ -96,7 +92,7 @@ function CardInfoCompany({getSearch, getFilter}) {
                                 </div>
                                 <div >
                                     <button
-                                        onClick={() => navigate(`/home/profile-comp${item.id_company}`)}
+                                        onClick={() => navigate(`/home/profile-comp/${item.id_company}`)}
                                         className="btn-primary py-4 px-8 mr-12">
                                         Lihat Profile
                                     </button>

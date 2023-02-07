@@ -36,27 +36,22 @@ const App = () => {
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/home" element={<Home />} />
-
           <Route path="/home/profile-portofolio/:id" element={<ProfilePortofolio />} />
           <Route path="/hire-page/:id" element={<Hire />} />
-
           <Route path="/option-login" element={<LoginOption />} />
           <Route path="/option-regist" element={<RegistOption />} />
           <Route path="/user-login" element={<UserLogin />} />
           <Route path="/user-regist" element={<UserRegist />} />
-
           <Route path="/user-edit" element={<UserEdit />} />
-
           <Route path="/comp-login" element={<CompLogin />} />
           <Route path="/comp-regist" element={<CompRegist />} />
-
           <Route path="/comp-edit" element={<CompEdit />} />
           <Route path="/reset-password" element={<ResetPass />} />
           <Route path="/confirm-password" element={<ConfirmPass />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/confirm-password-login" element={<ConfirmPassLogin />} />
           <Route path="/search-mobile" element={<SearcMobile/>} />
-          <Route path="/home/profile-comp" element={<ProfileComapany/>} />
+          <Route path="/home/profile-comp/:id" element={<ProfileComapany/>} />
           <Route path='404' element={<InvalidRoute />} />
           <Route path='*' exact element={<Navigate to='404' />} />
         </Routes>

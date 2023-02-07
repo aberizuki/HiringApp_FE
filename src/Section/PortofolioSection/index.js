@@ -19,7 +19,7 @@ function PortofolioSection() {
     const img = `${url}/uploads/images/${dataUser.img_profile}`
 
     const isComp = () => {
-        let role = JSON.parse(localStorage.getItem('@userLogin')).user.role
+        let role = JSON.parse(localStorage.getItem('@userLogin'))?.user?.role
         if (role === 'talent') {
             return 'Apply'
         } else {
