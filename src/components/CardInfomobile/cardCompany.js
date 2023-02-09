@@ -4,7 +4,7 @@ import axios from "axios";
 
 function CardCompany(props) {
     const Navigate = useNavigate()
-    // const {param} = props
+    const {searching} = props
     const [isData, setIsData] = useState([])
 
  
@@ -23,7 +23,7 @@ function CardCompany(props) {
 
     useEffect(() => {
         getDataCompany()
-    }, []);
+    }, [searching]);
     return (
         <div>
             <div

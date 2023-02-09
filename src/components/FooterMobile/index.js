@@ -17,7 +17,7 @@ function FooterMobile() {
                 <img src={require("src/assets/search.png")} 
                 onClick={()=> Navigate("/search-mobile")}
                 alt="" className="w-6 h-6"/>
-                <img src={require("src/assets/chat-icon.png")} alt="" className="w-6 h-6"/>
+                <img src={require("src/assets/chat-icon.png")} alt="" className="w-6 h-6" onClick={()=> Navigate("/chat")}/>
                 <img src={require("src/assets/avatar-icon.png")} alt="" className="w-6 h-6"/>
             </div>
             

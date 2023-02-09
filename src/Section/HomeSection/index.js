@@ -10,7 +10,7 @@ function HomeSection() {
     console.log("ini param in home", param);
 
     const getData = (value) =>{
-        console.log('valuee value',value)
+        console.log('valuee value 123',value)
         setParam(value)
     }
 

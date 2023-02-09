@@ -6,9 +6,33 @@ import axios from "axios";
 function CardInfoCompany({getSearch, getFilter}) {
     // console.log("data get company" ,getSearch);
     // const {isFilter,param} = props
+    // const [endPoint, setEndPoint] = useState("")
 
     const [isComp, setIsComp] = useState(false)
+    const [isPage, setIspage] = useState()
 
+
+    // useEffect(() => {
+    //     getData(getSearch)
+    // }, [getSearch])
+    // useEffect(() => {
+    //     getData(isPage)
+    // }, [isPage])
+    // useEffect(() => {
+
+    //     // console.log('tess ',getFilter);
+    //     // setEndPoint(getFilter);
+    //     getData(getFilter)
+        
+    // }, [getFilter])
+
+
+        // useEffect(() => {
+        //     setEndPoint(isPage)
+        //     getData()
+        // }, [isPage])
+
+    // console.log("enpointnya", endPoint);
     useEffect(() => {
         let dataLocal = localStorage.getItem('@userLogin')
         dataLocal = JSON.parse(dataLocal)
@@ -22,17 +46,9 @@ function CardInfoCompany({getSearch, getFilter}) {
 
     const navigate = useNavigate()
     const [isData, setIsData] = useState([])
-    const [isPage, setIspage] = useState()
 
-    // const url =(getSearch)=>{
-    //     if (getSearch != "") {
-    //         return (`http://localhost:5500/api/company/?company=${getSearch}`)
-    //     } else if (isPage != null){
-    //         return (`http://localhost:5500/api/company/?limit=1&page=${isPage}`)
-    //     }else{
-    //         return(`http://localhost:5500/api/company/`)
-    //     }
-    // }
+    console.log("value", getFilter);
+
 
     const url =(getSearch)=>{
         if (getSearch !== "") {
@@ -43,12 +59,13 @@ function CardInfoCompany({getSearch, getFilter}) {
             return(`http://localhost:5500/api/company/?field=${getFilter}`) 
         }
         else{
-            return (`http://localhost:5500/api/company/?limit=3&page=${isPage}`)
+            return (`http://localhost:5500/api/company/?limit=2&page=${isPage}`)
         }
     }
 
     const getData = () => {
         axios
+        // url(getSearch)
             .get(url(getSearch))
             .then(res => {
                 //   console.log(res.data.result)
@@ -61,7 +78,7 @@ function CardInfoCompany({getSearch, getFilter}) {
 
     useEffect(() => {
         getData()
-    }, [getSearch, isPage, getFilter]);
+    }, [getSearch,isPage, getFilter]);
 
 
     return (
@@ -102,7 +119,7 @@ function CardInfoCompany({getSearch, getFilter}) {
                 }
 
             </div>
-            <Paginations getPage={(e)=> setIspage(e) }/>
+            <Paginations getPage={(e)=> setIspage(e)}/>
         </div>
     )
 }

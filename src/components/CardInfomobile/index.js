@@ -10,12 +10,11 @@ function CardInfoMobile(props) {
 
     let dataLocal = localStorage.getItem('@userLogin')
     dataLocal = JSON.parse(dataLocal)
-    // console.log("data ", dataLocal?.company?.role);
     let role = dataLocal?.user?.role
 
     const getData = () => {
         axios
-            .get(`http://localhost:5500/api/users?`)
+            .get(`http://localhost:5500/api/users?search=${param}`)
             .then(res => {
                 //   console.log("ini mbile user", res.data.data)
                 setIsData(
@@ -28,7 +27,7 @@ function CardInfoMobile(props) {
 
     useEffect(() => {
         getData()
-    }, []);
+    }, [param]);
 
     // console.log("data api mobile", isData);
     return (

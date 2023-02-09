@@ -5,14 +5,13 @@ import Header from "src/components/Header";
 import ChatSection from "src/Section/ChatSection";
 
 function ChatPage() {
-  return (
-    <div>
-      <Navbar />
-      <Header />
-      <ChatSection />
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Navbar/>
+            <ChatSection/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default ChatPage;
