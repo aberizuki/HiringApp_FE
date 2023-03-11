@@ -22,21 +22,25 @@ function CardUserEdit() {
     setImagePreview(URL.createObjectURL(file))
   }
 
-  const handleSubmit = async () => {
-    // e.preventDefault();
+  const handleSubmit = () => {
     const body = new FormData();
     body.append('img_profile', image);
 
-    try {
-      await axios.patch(`${url}/api/users/${idLogin}`, body, {
-        method: 'PATCH',
-        headers: {
-          'content-type': 'multipart/form-data',
-        }
-      })
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
+    // axios.patch(`${url}/api/users/${idLogin}`, body, {
+    //   method: 'PATCH',
+    //   headers: {
+    //     'Content-type': 'multipart/form-data',
+    //   }
+    // })
+    //   .then(res => {
+    //     // console.log(res);
+    //     setTimeout(() => {
+    //       window.location.reload();
+    //     }, 1500);
+    //   })
+    //   .catch(error => {
+    //     console.log(error.response.data.message);
+    //   })
   }
 
   return (
@@ -49,7 +53,7 @@ function CardUserEdit() {
                 {imagePreview ? <img src={imagePreview} className='w-[150px] rounded-full' alt='Profile' /> : <img src={imagePlaceHolder} className='w-[150px] rounded-full' alt='Profile' />}
               </div>
               <div className="">
-                <div className="text-[#9EA0A5] flex justify-center mt-5" style={{cursor: 'pointer'}} onClick={() => document.querySelector(".input-field").click()}>
+                <div className="text-[#9EA0A5] flex justify-center mt-5" style={{ cursor: 'pointer' }} onClick={() => document.querySelector(".input-field").click()}>
                   Edit
                 </div>
                 <input type='file' className='input-field' hidden onChange={(e) => onImageUpload(e)} />
@@ -72,10 +76,10 @@ function CardUserEdit() {
         <button className="btn-primary py-4 px-8 w-full mb-10">
           Edit Password
         </button>
-        <button 
+        <button
           className="bg-transparent text-[#5E50A1] border border-[#5E50A1] rounded py-4 px-8 w-full mb-10"
           onClick={handleSubmit()}>
-          Back 
+          Save Update
         </button>
       </div>
     </>

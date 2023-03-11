@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "src/Section/Footer";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination, Navigation, HashNavigation} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, HashNavigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "src/Section/Navbar";
 
 function Landing() {
@@ -21,20 +21,20 @@ function Landing() {
     }, [])
     return (
         <main>
-            <Navbar 
-                findJob={<div className = "flex" > <h4
+            <Navbar
+                findJob={<div className="flex" > <h4
                     onClick={(
-                        ) => login
-                        ? navigate("/home")
-                        : navigate("/comp-login")}
+                    ) => login
+                            ? navigate("/home")
+                            : navigate("/comp-login")}
                     className="font-semibold pl-10 px-4">Find Talent</h4>
-                <h4
-                    onClick={(
+                    <h4
+                        onClick={(
                         ) => login
-                        ? navigate("/home")
-                        : navigate("/user-login")}
-                    className="font-semibold px-4">Find Work</h4>
-            </div>
+                                ? navigate("/home")
+                                : navigate("/user-login")}
+                        className="font-semibold px-4">Find Work</h4>
+                </div>
                 }
             />
             <section className="mb-5">
@@ -42,9 +42,9 @@ function Landing() {
                     <div className="m-10 lg:m-[50px] lg:ml-[100px]">
                         <div className=" text-[30px] mb-5 lg:pt-[100px] font-semibold">
                             Talenta terbaik negeri
-                            <br/>
+                            <br />
                             untuk perubahan
-                            <br/>
+                            <br />
                             revolusi 4.0
                         </div>
                         <div className="mb-5 text-[13px]">
@@ -59,14 +59,14 @@ function Landing() {
                         </div>
                     </div>
                     <div className="hidden lg:flex justify-center m-10 lg:mr-[100px]">
-                        <img className="" src={require("src/assets/img/Landing1.png")}/>
+                        <img className="" src={require("src/assets/img/Landing1.png")} />
                     </div>
                 </div>
             </section>
             <section className="mb-5">
                 <div className="lg:flex">
                     <div className="hidden lg:flex justify-center m-10">
-                        <img className="" src={require("src/assets/img/Landing2.png")}/>
+                        <img className="" src={require("src/assets/img/Landing2.png")} />
                     </div>
                     <div className="m-10 lg:mt-[80px] lg:mr-[100px]">
                         <div className=" text-[30px] mb-10 font-semibold">
@@ -77,7 +77,7 @@ function Landing() {
                                 <img
                                     className="ml-5 w-[24] h-[24] mr-5"
                                     src={require("src/assets/img/tick1.png")}
-                                    alt="logo-peworld"/>
+                                    alt="logo-peworld" />
                                 <div className="text-[16px]">
                                     Lorem ipsum dolor sit amet</div>
                             </div>
@@ -87,7 +87,7 @@ function Landing() {
                                 <img
                                     className="ml-5 w-[24] h-[24] mr-5"
                                     src={require("src/assets/img/tick1.png")}
-                                    alt="logo-peworld"/>
+                                    alt="logo-peworld" />
                                 <div className="text-[16px]">
                                     Lorem ipsum dolor sit amet</div>
                             </div>
@@ -97,7 +97,7 @@ function Landing() {
                                 <img
                                     className="ml-5 w-[24] h-[24] mr-5"
                                     src={require("src/assets/img/tick1.png")}
-                                    alt="logo-peworld"/>
+                                    alt="logo-peworld" />
                                 <div className="text-[16px]">
                                     Lorem ipsum dolor sit amet</div>
                             </div>
@@ -107,7 +107,7 @@ function Landing() {
                                 <img
                                     className="ml-5 w-[24] h-[24] mr-5"
                                     src={require("src/assets/img/tick1.png")}
-                                    alt="logo-peworld"/>
+                                    alt="logo-peworld" />
                                 <div className="text-[16px]">
                                     Lorem ipsum dolor sit amet</div>
                             </div>
@@ -130,28 +130,28 @@ function Landing() {
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">Java</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">Kotlin</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">PHP</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">JavaScript</div>
                                     </div>
                                 </div>
@@ -162,28 +162,28 @@ function Landing() {
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">Golang</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">C++</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">Ruby</div>
                                     </div>
                                     <div className="flex mb-10">
                                         <img
                                             className="ml-5 w-[24] h-[24] mr-5"
                                             src={require("src/assets/img/tick2.png")}
-                                            alt="logo-peworld"/>
+                                            alt="logo-peworld" />
                                         <div className="text-[16px]">etc.</div>
                                     </div>
                                 </div>
@@ -191,7 +191,7 @@ function Landing() {
                         </div>
                     </div>
                     <div className="hidden lg:flex justify-center m-10 lg:mr-[100px]">
-                        <img className="" src={require("src/assets/img/Landing3.png")}/>
+                        <img className="" src={require("src/assets/img/Landing3.png")} />
                     </div>
                 </div>
             </section>
@@ -218,12 +218,12 @@ function Landing() {
                                     <div className="flex justify-center">
                                         <img
                                             className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5"
-                                            src={require("src/assets/img/hikaru.jpg")}
-                                            alt="logo-peworld"/>
+                                            src={require("src/assets/avatar-icon.png")}
+                                            alt="logo-peworld" />
                                     </div>
                                     <div className="px-5">
                                         <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                                            Morita Hikaru
+                                            Thomas Shelby
                                         </h5>
                                         <div className="text-gray-700 mb-4 flex justify-center">
                                             Web Developer
@@ -238,12 +238,12 @@ function Landing() {
                                     <div className="flex justify-center">
                                         <img
                                             className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5 p-[]"
-                                            src={require("src/assets/img/hono.jpg")}
-                                            alt="logo-peworld"/>
+                                            src={require("src/assets/christian-buehner-DItYlc26zVI-unsplash 1.png")}
+                                            alt="logo-peworld" />
                                     </div>
                                     <div className="px-5">
                                         <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                                            Tamura Hono
+                                            Van Basten
                                         </h5>
                                         <div className="text-gray-700 mb-4 flex justify-center">
                                             Web Developer
@@ -258,12 +258,12 @@ function Landing() {
                                     <div className="flex justify-center">
                                         <img
                                             className="h-[30px] w-[30px] rounded-full border-8 border-[#FBB0175E] m-5"
-                                            src={require("src/assets/img/mizuki.jpg")}
-                                            alt="logo-peworld"/>
+                                            src={require("src/assets/user-image.webp")}
+                                            alt="logo-peworld" />
                                     </div>
                                     <div className="px-5">
                                         <h5 className="text-gray-900 text-[30px] font-medium mb-2 flex justify-center">
-                                            Yamashita Mizuki
+                                            Muller
                                         </h5>
                                         <div className="text-gray-700 mb-4 flex justify-center">
                                             Web Developer
@@ -286,7 +286,7 @@ function Landing() {
                             className="flex justify-between items-center w-[90%] bg-banner bg-no-repeat bg-cover rounded-tl-[40px] rounded-br-[40px] rounded-tr-lg rounded-b-lg">
                             <div className="text-[25px] m-5 lg:text-[36px] lg:ml-[40px] text-[#FFFFFF]">
                                 Lorem ipsum
-                                <br/>
+                                <br />
                                 dolor sit amet
                             </div>
                             <div className="flex m-5">
@@ -301,7 +301,7 @@ function Landing() {
                     </div>
                 </div>
             </section>
-            <Footer/> {/* <footer className="flex justify-center w-full bg-[#5E50A1]">
+            <Footer /> {/* <footer className="flex justify-center w-full bg-[#5E50A1]">
         <div className="container text-lg text-white">
           <div className="flex flex-col pt-[70px] pb-10">
             <div className="w-full md:w-full lg:w-[30%]">

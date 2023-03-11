@@ -50,8 +50,8 @@ const App = () => {
           <Route path="/confirm-password" element={<ConfirmPass />} />
           <Route path="/chat" element={<ChatPage />} />
           <Route path="/confirm-password-login" element={<ConfirmPassLogin />} />
-          <Route path="/search-mobile" element={<SearcMobile/>} />
-          <Route path="/home/profile-comp/:id" element={<ProfileComapany/>} />
+          <Route path="/search-mobile" element={<SearcMobile />} />
+          <Route path="/home/profile-comp/:id" element={<ProfileComapany />} />
           <Route path='404' element={<InvalidRoute />} />
           <Route path='*' exact element={<Navigate to='404' />} />
         </Routes>
