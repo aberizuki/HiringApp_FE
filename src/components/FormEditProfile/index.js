@@ -1,7 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from '../../AppContext'
 
 export default function FormUserEdit() {
+  const { data, updateData } = useContext(AppContext);
+
   const url = process.env.REACT_APP_HOST
   const idLogin = JSON.parse(localStorage.getItem('@userLogin')).user.id_user
 
@@ -26,6 +29,14 @@ export default function FormUserEdit() {
     body.append('gitlab_account', gitlab);
     body.append('description', description);
 
+    // updateData({
+    //   ...data,
+    //   name: fullname ? fullname : data.name,
+    //   jobdesk: jobdesk ? jobdesk : data.jobdesk,
+    //   domicile: domicile ? domicile : data.domicile,
+    //   bebas: description ? description : data.bebas
+    // })
+    // alert('okay data saved!')
     try {
       await axios.patch(`${url}/api/users/${idLogin}`, body, {
         method: 'PATCH',

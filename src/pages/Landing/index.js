@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Footer from "src/Section/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, HashNavigation } from "swiper";
@@ -7,8 +7,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useNavigate } from "react-router-dom";
 import Navbar from "src/Section/Navbar";
+import { AppContext } from '../../AppContext'
 
 function Landing() {
+    // const { data, updateData } = useContext(AppContext);
+    // console.log(data);
+
     const navigate = useNavigate()
     const [login, setLogin] = useState(false)
     useEffect(() => {
