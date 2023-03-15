@@ -9,21 +9,16 @@ export default function FormUserSkill() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const body = new FormData();
-    body.append('skill_name', skill);
-    body.append('id_user', idLogin);
-
-    try {
-      await axios.patch(`${url}/api/users-skills/${idLogin}`, body, {
-        method: 'PATCH',
-        headers: {
-          'content-type': 'application/x-www-form-urlencoded',
-        }
+    await axios.post(`${url}/api/users-skills`, {
+      skill_name: skill,
+      id_user: idLogin
+    })
+      .then(res => {
+        alert('Skil added!')
       })
-      alert('Saved!')
-    } catch (error) {
-      console.log(error.response.data.message);
-    }
+      .catch(err => {
+        console.log(err.response.data.message);
+      })
   }
   return (
     <>
@@ -33,7 +28,7 @@ export default function FormUserSkill() {
             <div className="text-[22px] mb-5 mx-5">Skill</div>
             <hr className="mb-5 mx-5" />
             <div className="flex justify-between">
-              <form onSubmit={handleSubmit} className="m-5 w-[100%]">
+              <div className="m-5 w-[100%]">
                 <div className="mb-4">
                   <input
                     className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-[13px] font-light"
@@ -43,11 +38,11 @@ export default function FormUserSkill() {
                     onChange={(e) => setSkill(e.target.value)}
                   />
                 </div>
-              </form>
+              </div>
               <div className="flex justify-end m-5">
-                <button 
+                <button
                   className="bg-[#FBB017] hover:bg-[#FBB017] text-white font-bold py-2 px-4 rounded h-[50px]"
-                  type="submit">
+                  onClick={handleSubmit}>
                   Save
                 </button>
               </div>
