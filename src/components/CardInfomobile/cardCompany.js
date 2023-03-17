@@ -1,25 +1,27 @@
-import React, {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function CardCompany(props) {
+    const urlApi = process.env.REACT_APP_HOST
+
     const Navigate = useNavigate()
-    const {searching} = props
+    const { searching } = props
     const [isData, setIsData] = useState([])
 
- 
+
 
     const getDataCompany = () => {
         axios
-            .get(`http://localhost:5500/api/company/`)
+            .get(`${urlApi}/api/company/`)
             .then(res => {
-                  console.log("ini mbile user", res.data.result)
+                console.log("ini mbile user", res.data.result)
                 setIsData(
                     res?.data.result
                 )
             })
             .catch(err => console.log(err))
-        }
+    }
 
     useEffect(() => {
         getDataCompany()
@@ -30,7 +32,7 @@ function CardCompany(props) {
                 onClick={() => Navigate("/home/profile-portofolio")}
                 className="flex  flex-col md:hidden">
                 {
-                    isData.map((item,i) => (
+                    isData.map((item, i) => (
                         <div className="w-full bg-white rounded-lg px-4 mt-2">
                             <div className="card-profil flex justify-between items-center py-4">
                                 <div className="flex items-center ">
@@ -38,7 +40,7 @@ function CardCompany(props) {
                                         <img
                                             className="w-[70px]"
                                             src={require("src/assets/user-image.webp")}
-                                            alt="smhfbdhf"/>
+                                            alt="smhfbdhf" />
                                     </div>
                                     <div>
                                         <p className="text-sm text-black font-semibold mb-3">{item.name_company}</p>
