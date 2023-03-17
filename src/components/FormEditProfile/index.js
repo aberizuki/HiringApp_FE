@@ -5,27 +5,28 @@ export default function FormUserEdit() {
   const url = process.env.REACT_APP_HOST
   const idLogin = JSON.parse(localStorage.getItem('@userLogin')).user.id_user
 
-  const [fullname, setFullname] = useState('')
-  const [jobdesk, setJobdesk] = useState('')
-  const [employmentType, setEmploymentType] = useState('')
-  const [domicile, setDomicile] = useState('')
-  const [instagram, setInstagram] = useState('')
-  const [github, setGithub] = useState('')
-  const [gitlab, setGitlab] = useState('')
-  const [description, setDescription] = useState('')
+  const [formUser, setFormUser] = useState({
+    full_name: '',
+    job_desk: '',
+    employment_type: '',
+    domicile: '',
+    ig_account: '',
+    github_account: '',
+    gitlab_account: '',
+    description: ''
+  })
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const body = new FormData();
-    body.append('full_name', fullname);
-    body.append('job_desk', jobdesk);
-    body.append('employment_type', employmentType);
-    body.append('domicile', domicile);
-    body.append('ig_account', instagram);
-    body.append('github_account', github);
-    body.append('gitlab_account', gitlab);
-    body.append('description', description);
 
+    // append a large amount of data to a FormData object with different keys and values
+    for (const key in formUser) {
+      if (formUser.hasOwnProperty(key)) {
+        const value = formUser[key];
+        body.append(key, value);
+      }
+    }
     try {
       await axios.patch(`${url}/api/users/${idLogin}`, body, {
         method: 'PATCH',
@@ -33,7 +34,7 @@ export default function FormUserEdit() {
           'content-type': 'application/x-www-form-urlencoded',
         }
       })
-      alert('Saved!')
+      alert('Profile information updated!')
     } catch (error) {
       console.log(error.response.data.message);
     }
@@ -55,7 +56,7 @@ export default function FormUserEdit() {
                   id="username"
                   type="text"
                   placeholder="Insert your Name"
-                  onChange={(e) => setFullname(e.target.value)}
+                  onChange={(e) => setFormUser({ ...formUser, full_name: e.target.value })}
                 />
               </div>
               <div className="mb-4">
@@ -66,8 +67,8 @@ export default function FormUserEdit() {
                   className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-[13px] font-light"
                   id="username"
                   type="text"
-                  placeholder="Insert your Email"
-                  onChange={(e) => setJobdesk(e.target.value)}
+                  placeholder="Insert your Job Desk"
+                  onChange={(e) => setFormUser({ ...formUser, job_desk: e.target.value })}
                 />
               </div>
               <div className="mb-4">
@@ -77,11 +78,11 @@ export default function FormUserEdit() {
                 <select
                   id=""
                   className="h-[50px] appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-[13px] font-light"
-                  onChange={(e) => setEmploymentType(e.target.value)}
+                  onChange={(e) => setFormUser({ ...formUser, employment_type: e.target.value })}
                 >
                   <option selected>Employment Type</option>
-                  <option>Freelance</option>
-                  <option>Full Time</option>
+                  <option value='freelance'>Freelance</option>
+                  <option value='full time'>Full Time</option>
                 </select>
               </div>
               <div className="mb-4">
@@ -93,7 +94,7 @@ export default function FormUserEdit() {
                   id="username"
                   type="text"
                   placeholder="Insert your Phone"
-                  onChange={(e) => setDomicile(e.target.value)}
+                  onChange={(e) => setFormUser({ ...formUser, domicile: e.target.value })}
                 />
               </div>
               <div className="block lg:flex justify-between">
@@ -106,7 +107,7 @@ export default function FormUserEdit() {
                     id="username"
                     type="text"
                     placeholder="Insert your Password"
-                    onChange={(e) => setInstagram(e.target.value)}
+                    onChange={(e) => setFormUser({ ...formUser, ig_account: e.target.value })}
                   />
                 </div>
                 <div className="mb-4 lg:mx-4 w-[100%]">
@@ -118,7 +119,7 @@ export default function FormUserEdit() {
                     id="username"
                     type="text"
                     placeholder="Confirm Password"
-                    onChange={(e) => setGithub(e.target.value)}
+                    onChange={(e) => setFormUser({ ...formUser, github_account: e.target.value })}
                   />
                 </div>
                 <div className="mb-4 lg:ml-4 w-[100%]">
@@ -130,7 +131,7 @@ export default function FormUserEdit() {
                     id="username"
                     type="text"
                     placeholder="Confirm Password"
-                    onChange={(e) => setGitlab(e.target.value)}
+                    onChange={(e) => setFormUser({ ...formUser, gitlab_account: e.target.value })}
                   />
                 </div>
               </div>
@@ -143,7 +144,7 @@ export default function FormUserEdit() {
                   id="username"
                   type="text"
                   placeholder=""
-                  onChange={(e) => setDescription(e.target.value)}
+                  onChange={(e) => setFormUser({ ...formUser, description: e.target.value })}
                 />
               </div>
               <div className="flex justify-end m-5">

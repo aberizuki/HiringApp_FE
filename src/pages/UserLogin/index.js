@@ -13,14 +13,14 @@ export default function UserLogin() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    console.log(loginForm);
+    // console.log(loginForm);
     axios({
       url: "http://localhost:5500/api/auth/login-user",
       method: "POST",
       data: loginForm,
     })
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         localStorage.setItem("@userLogin", JSON.stringify(res.data.result));
         alert(res.data.message);
         navigate("/home");

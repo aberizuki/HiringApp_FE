@@ -1,12 +1,13 @@
 import React from "react";
 import Routers from "./routers";
 import "src/assets/Styles/style.css";
+import AppContextProvider from './AppContext';
 
 function App() {
   return (
-    <div>
-        <Routers/>
-    </div>
+    <AppContextProvider>
+      <Routers />
+    </AppContextProvider>
   );
 }
 
