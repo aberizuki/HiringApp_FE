@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function CompRegist() {
+  const urlApi = process.env.REACT_APP_HOST
+
   const [signupForm, setSignupForm] = useState({
     name: "",
     email: "",
@@ -18,7 +20,7 @@ export default function CompRegist() {
     event.preventDefault();
     console.log(signupForm);
     axios({
-      url: "http://localhost:5500/api/auth/regis-company",
+      url: `${urlApi}/api/auth/regis-company`,
       method: "POST",
       data: signupForm,
     })
