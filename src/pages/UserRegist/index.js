@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function UserRegist() {
+  const urlApi = process.env.REACT_APP_HOST
+
   const [signupForm, setSignupForm] = useState({
     full_name: "",
     email: "",
@@ -17,7 +19,7 @@ export default function UserRegist() {
     event.preventDefault();
     console.log(signupForm);
     axios({
-      url: "http://localhost:5500/api/auth/regis-user",
+      url: `${urlApi}/api/auth/regis-user`,
       method: "POST",
       data: signupForm,
     })

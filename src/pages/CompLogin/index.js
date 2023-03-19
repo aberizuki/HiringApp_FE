@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function CompLogin() {
+  const urlApi = process.env.REACT_APP_HOST
+
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
@@ -15,7 +17,7 @@ export default function CompLogin() {
     event.preventDefault();
 
     axios({
-      url: "http://localhost:5500/api/auth/login-company",
+      url: `${urlApi}/api/auth/login-company`,
       method: "POST",
       data: loginForm,
     })

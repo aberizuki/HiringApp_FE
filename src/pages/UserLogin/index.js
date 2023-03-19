@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 export default function UserLogin() {
+  const urlApi = process.env.REACT_APP_HOST
+
   const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
@@ -15,7 +17,7 @@ export default function UserLogin() {
     event.preventDefault();
     // console.log(loginForm);
     axios({
-      url: "http://localhost:5500/api/auth/login-user",
+      url: `${urlApi}/api/auth/login-user`,
       method: "POST",
       data: loginForm,
     })
